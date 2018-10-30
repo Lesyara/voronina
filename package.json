@@ -1,0 +1,68 @@
+{
+  "name": "voronina",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
+    "ajv": "^6.5.3",
+    "ajv-keywords": "^3.2.0",
+    "autoprefixer": "^8.6.5",
+    "browser-sync": "^2.26.0",
+    "eslint": "^5.6.1",
+    "gulp": "^4.0.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-less": "^4.0.1",
+    "gulp-plumber": "1.2.x",
+    "gulp-postcss": "7.0.x",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.1",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-webp": "^3.0.0",
+    "posthtml-include": "^1.2.0",
+    "stylelint": "^9.6.0",
+    "stylelint-config-htmlacademy": "^0.1.1"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint 'source/less/**/*.less' --syntax less",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ie 11",
+    "ff",
+    "Chrome",
+    "Safari"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/less/**/*.less"
+  ],
+  "engines": {
+    "node": "8.9.4"
+  },
+  "author": "",
+  "license": "ISC",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-posthtml": "^3.0.4",
+    "gulp-svgstore": "^7.0.0",
+    "pump": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lesyara/voronina.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lesyara/voronina/issues"
+  },
+  "homepage": "https://github.com/Lesyara/voronina#readme",
+  "description": ""
+}
