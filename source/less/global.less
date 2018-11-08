@@ -1,0 +1,40 @@
+html {
+  box-sizing: content-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  background-color: @back-color;
+  font-family: @main-font, @web-safe-font, @web-safe-default-font;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: @main-font-color;
+  text-transform: none;
+}
+
+img {
+  height: 100%;
+  width: auto;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
