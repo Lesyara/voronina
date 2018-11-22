@@ -8,15 +8,17 @@ html {
 }
 body {
   min-width: 320px;
-  margin: 0;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 0;
-  background-color: #ffffff;
   font-family: "Source Serif Pro", "Lucida Bright", "Times New Roman";
   font-size: 14px;
   line-height: 1.5;
   font-weight: 400;
   color: #212021;
   text-transform: none;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
 }
 img {
   height: 100%;
@@ -26,6 +28,9 @@ ul {
   list-style: none;
   padding-left: 0;
 }
+figure {
+  margin: 0;
+}
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -33,3 +38,126 @@ ul {
   height: 1px;
   margin: -1px;
 }
+.content-wrapper {
+  width: 290px;
+  margin: 0 auto;
+}
+@media (min-width: 640px) {
+  body {
+    background-image: url("../img/back-tablet.jpg");
+    background-position: center;
+    background-size: 764px auto;
+  }
+  .content-wrapper {
+    width: 640px;
+  }
+}
+@media (min-width: 1330px) {
+  body {
+    background-image: url("../img/back-desktop.jpg");
+    background-size: 1440px auto;
+  }
+  .content-wrapper {
+    width: 1180px;
+  }
+}
+.introduction {
+  min-height: 480px;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 200;
+  color: #ffffff;
+  text-transform: none;
+  background-image: url("../../img/img-cover-mob.jpg");
+  background-size: 320px auto;
+  background-color: #f8f8f8;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (min-width: 640px) {
+  .introduction {
+    font-size: 16px;
+    color: #212021;
+    background-image: url("../../img/cover-back-tablet.jpg"), url("../../img/img-cover-tablet.jpg");
+    background-position: right, center;
+    background-size: 308px auto, 327px auto;
+  }
+}
+@media (min-width: 1330px) {
+  .introduction {
+    font-size: 18px;
+    background-image: url("../../img/cover-back-desktop.jpg"), url("../../img/img-cover-desktop.jpg");
+    background-size: 606px auto, 348px auto;
+  }
+}
+.cite-menu__item {
+  font-family: "Source Serif Pro", "Lucida Bright", serif;
+  font-size: 21px;
+  font-weight: 600;
+  color: #212021;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+.cite-menu__list--hidden {
+  display: none;
+}
+.detailed-portfolio {
+  background-image: url("../../img/portfolio-section-back-mob.jpg");
+  background-repeat: no-repeat;
+}
+@media (min-width: 640px) {
+  background-image: url("../../img/portfolio-section-back-tablet.jpg");
+}
+@media (min-width: 1330px) {
+  background-image: url("../../img/portfolio-section-back-desktop.jpg");
+}
+@media (min-width: 640px) {
+  .portfolio-prewiew__img--lady-marm {
+    width: 240px;
+    height: 376px;
+  }
+  .portfolio-prewiew__img--funky-food {
+    width: 184px;
+    height: 229px;
+  }
+  .portfolio-prewiew__img--good-food {
+    width: 184px;
+    height: 236px;
+  }
+  .portfolio-prewiew__img--branch-rest {
+    width: 184px;
+    height: 287px;
+  }
+}
+@media (min-width: 1330px) {
+  .portfolio-prewiew__img--lady-marm {
+    width: 414px;
+    height: 648px;
+  }
+  .portfolio-prewiew__img--funky-food {
+    width: 317px;
+    height: 396px;
+  }
+  .portfolio-prewiew__img--good-food {
+    width: 317px;
+    height: 396px;
+  }
+  .portfolio-prewiew__img--branch-rest {
+    width: 315px;
+    height: 495px;
+  }
+}
+/*
+tablet:
+1 - 240  x  376
+2 - 184  x  229
+3 - 184  x  236
+4 - 184  x  287
+
+desktop:
+1 - 414  x  648
+2 - 317  x  396
+3 - 317  x  396
+4 - 315  x  495
+
+*/

@@ -9,16 +9,18 @@ html {
 }
 
 body {
-  min-width: 320px;
-  margin: 0;
+  min-width: @device-min-width;
+  max-width: @device-max-width;
+  margin: 0 auto;
   padding: 0;
-  background-color: @back-color;
   font-family: @main-font, @web-safe-font, @web-safe-default-font;
   font-size: 14px;
   line-height: 1.5;
   font-weight: 400;
   color: @main-font-color;
   text-transform: none;
+  background-color: @back-color;
+  background-repeat: no-repeat;
 }
 
 img {
@@ -31,10 +33,42 @@ ul {
   padding-left: 0;
 }
 
+figure {
+  margin: 0;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+
+.content-wrapper {
+  width: 290px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-switch-width) {
+  body {
+    background-image: url("../img/back-tablet.jpg");
+    background-position: center;
+    background-size: 764px auto;
+  }
+
+  .content-wrapper {
+    width: 640px;
+  }
+}
+
+@media (min-width: @desktop-switch-width) {
+  body {
+    background-image: url("../img/back-desktop.jpg");
+    background-size: 1440px auto;
+  }
+
+  .content-wrapper {
+    width: 1180px;
+  }
 }
