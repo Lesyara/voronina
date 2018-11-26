@@ -1,6 +1,10 @@
+.cite-menu {
+  position: relative;
+}
+
 .cite-menu__item {
-  font-family: @main-font, @web-safe-font, serif;
-  font-size: @menu-font-size;
+  font-family: @main-font, @web-safe-serif-font, serif;
+  font-size: @menu-fs;
   font-weight: 600;
   color: @main-font-color;
   line-height: 1.5;
@@ -9,4 +13,9 @@
 
 .cite-menu__list--hidden {
   display: none;
+}
+
+.cite-menu__list--show {
+  display: block;
+  position: absolute;
 }

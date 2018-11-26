@@ -1,4 +1,23 @@
+.portfolio-prewiew__descr {
+  font-family: @headers-font, @web-safe-serif-font, serif;
+  font-size: @caption-fs-mob;
+  color: @main-font-color;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.portfolio-prewiew__tag {
+  font-family: @main-font, @web-safe-serif-font, serif;
+  font-size: @label-fs-mob;
+  line-height: 1.5;
+}
+
+
 @media (min-width: @tablet-switch-width) {
+  .portfolio-prewiew__descr {
+    font-size: @caption-fs-tablet;
+  }
+
   .portfolio-prewiew__img {
     &--lady-marm {
       width: 240px;
@@ -23,6 +42,14 @@
 }
 
 @media (min-width: @desktop-switch-width) {
+  .portfolio-prewiew__descr {
+    font-size: @caption-fs-desktop;
+  }
+
+  .portfolio-prewiew__tag {
+    font-size: @label-fs-desktop;
+  }
+
   .portfolio-prewiew__img {
     &--lady-marm {
       width: 414px;

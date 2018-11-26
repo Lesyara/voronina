@@ -1,4 +1,29 @@
 .about-photographer {
-  background-image: url("../../img/about-photo-1-mob.jpg");
+  font-family: @bolder-main-font, @web-safe-serif-font, serif;
+  font-size: @plain-text-fs-mob;
+  color: @main-font-color;
+  background-image: url("../../img/about-photo-1-mob.jpg"), url("../../img/about-photo-2-mob.jpg");
+  background-position: right, left;
   background-repeat: no-repeat;
+}
+
+.about-photographer__contact {
+  text-decoration: none;
+  color: @main-font-color;
+}
+
+@media (min-width: @tablet-switch-width) {
+  .about-photographer {
+    font-size: @plain-text-fs-tablet;
+    background-image: url("../../img/about-photo-1-tablet.jpg"), url("../../img/about-photo-2-tablet.jpg");
+    background-position: center, center;
+  }
+}
+
+@media (min-width: @desktop-switch-width) {
+  .about-photographer {
+    font-size: @plain-text-fs-desktop;
+    background-image: url("../../img/about-photo-1-tablet.jpg"), url("../../img/about-photo-2-tablet.jpg");
+    background-position: center, center;
+  }
 }

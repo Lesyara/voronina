@@ -1,0 +1,32 @@
+.pricelist {
+  font-family: @bolder-main-font, @web-safe-serif-font, serif;
+  font-size: @plain-text-fs-mob;
+  color: @main-font-color;
+}
+
+.pricelist__caption {
+  font-family: @bolder-main-font, @web-safe-serif-font, serif;
+  font-size: @caption-fs-mob;
+  color: @accent-font-color;
+}
+
+.pricelist__caption-bold {
+  font-family: @headers-font, @web-safe-serif-font, serif;
+  font-weight: 700;
+}
+
+@media (min-width: @tablet-switch-width) {
+  .pricelist__caption {
+    font-size: @caption-fs-tablet;
+  }
+}
+
+@media (min-width: @desktop-switch-width) {
+  .pricelist {
+    font-size: @plain-text-fs-desktop;
+  }
+
+  .pricelist__caption {
+    font-size: @caption-fs-desktop;
+  }
+}

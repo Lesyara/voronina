@@ -1,3 +1,33 @@
+@font-face {
+  font-family: "Source Serif Pro Regular";
+  src: url("../fonts/Source-serif-pro/SourceSerifPro-Regular.otf") format("opentype"), url("../fonts/Source-serif-pro/SourceSerifPro-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Source Serif Pro Bold";
+  src: url("../fonts/Source-serif-pro/SourceSerifPro-Bold.otf") format("opentype"), url("../fonts/Source-serif-pro/SourceSerifPro-Bold.woff") format("woff");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Source Serif Pro Light";
+  src: url("../fonts/Source-serif-pro/SourceSerifPro-Light.otf") format("opentype"), url("../fonts/Source-serif-pro/SourceSerifPro-Light.woff") format("woff");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Emona";
+  src: url("../fonts/Emona/Emona.otf") format("opentype"), url("../fonts/Emona/Emona.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "MyriadPro-Bold";
+  src: url("../fonts/MyriadPro-Bold/MyriadPro-Bold.eot") format("embedded-opentype"), url("../fonts/MyriadPro-Bold/MyriadPro-Bold.otf") format("opentype"), url("../fonts/MyriadPro-Bold/MyriadPro-Bold.woff") format("woff");
+  font-weight: 700;
+}
+
 html {
   box-sizing: content-box;
 }
@@ -13,7 +43,7 @@ body {
   max-width: @device-max-width;
   margin: 0 auto;
   padding: 0;
-  font-family: @main-font, @web-safe-font, @web-safe-default-font;
+  font-family: @main-font, @web-safe-serif-font, serif;
   font-size: 14px;
   line-height: 1.5;
   font-weight: 400;
@@ -50,6 +80,20 @@ figure {
   margin: 0 auto;
 }
 
+.section-header {
+  margin: 0;
+  font-family: @headers-font, @web-safe-serif-font, serif;
+  font-size: @section-header-fs-mob;
+}
+
+.section-link {
+  font-family: @links-font, @web-safe-ss-font, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 @media (min-width: @tablet-switch-width) {
   body {
     background-image: url("../img/back-tablet.jpg");
@@ -59,6 +103,10 @@ figure {
 
   .content-wrapper {
     width: 640px;
+  }
+
+  .section-header {
+    font-size: @section-header-fs-tablet;
   }
 }
 
@@ -70,5 +118,9 @@ figure {
 
   .content-wrapper {
     width: 1180px;
+  }
+
+  .section-header {
+    font-size: @section-header-fs-desktop;
   }
 }

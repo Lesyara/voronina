@@ -1,12 +1,22 @@
 .detailed-portfolio {
+  font-family: @bolder-main-font, @web-safe-serif-font, serif;
+  font-size: @plain-text-fs-mob;
+  color: @third-font-color;
   background-image: url("../../img/portfolio-section-back-mob.jpg");
   background-repeat: no-repeat;
 }
 
 @media (min-width: @tablet-switch-width) {
-  background-image: url("../../img/portfolio-section-back-tablet.jpg");
+  .detailed-portfolio {
+    color: @main-font-color;
+    font-size: @plain-text-fs-tablet;
+    background-image: url("../../img/portfolio-section-back-tablet.jpg");
+  }
 }
 
 @media (min-width: @desktop-switch-width) {
-  background-image: url("../../img/portfolio-section-back-desktop.jpg");
+  .detailed-portfolio {
+    font-size: @plain-text-fs-desktop;
+    background-image: url("../../img/portfolio-section-back-desktop.jpg");
+  }
 }
