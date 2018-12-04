@@ -1,4 +1,5 @@
 .introduction {
+  position: relative;
   min-height: 480px;
   font-size: 14px;
   line-height: 1.5;
@@ -12,12 +13,46 @@
   background-position: center;
 }
 
+.introduction__text {
+  margin-top: 150px;
+}
+
+.introduction--shaded {
+  background-color: @section-back-color;
+}
+
 .introduction__header {
   margin: 0;
-  font-size: 30px;
+  font-size: @header-fs-mob;
   font-weight: 600;
   line-height: 1.5;
   color: @third-font-color;
+}
+
+.introduction__links {
+  display: none;
+}
+
+.introduction__menu .cite-menu__list {
+  display: none;
+}
+
+.introduction__popup-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: @section-back-color;
+}
+
+.introduction__popup-menu .cite-menu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 150px;
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-switch-width) {
@@ -28,6 +63,11 @@
     background-position: right, center;
     background-size: 308px auto, 327px auto;
   }
+
+  .introduction__header {
+    font-size: @header-fs-tablet;
+    color: @main-font-color;
+  }
 }
 
 @media (min-width: @desktop-switch-width) {
@@ -35,5 +75,13 @@
     font-size: 18px;
     background-image: url("../../img/cover-back-desktop.jpg"), url("../../img/img-cover-desktop.jpg");
     background-size: 606px auto, 348px auto;
+  }
+
+  .introduction__header {
+    font-size: @header-fs-desktop;
+  }
+
+  .introduction__menu .cite-menu__list {
+    display: block;
   }
 }

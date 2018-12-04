@@ -1,5 +1,53 @@
 .cite-menu {
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  &--hidden {
+    display: none;
+  }
+
+  &--show {
+    display: flex;
+    z-index: 0;
+  }
+}
+
+.cite-menu__label {
+  margin-left: -15px;
+  padding: 10px 25px;
+  font-family: @logo-font;
+  font-size: @logo-fs-mob;
+  font-weight: 400;
+  color: @third-font-color;
+  letter-spacing: 0.25em;
+  background-color: @accent-color;
+  text-transform: uppercase;
+  z-index: 100;
+}
+
+.cite-menu__toggle {
+  width: 25px;
+  height: 14px;
+  padding: 0;
+  margin-left: auto;
+  margin-top: 8px;
+  font-size: 0;
+  background-size: 25px 14px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  z-index: 100;
+  cursor: pointer;
+
+  &--to-open {
+    background-image: url("../../img/toggle_bg_mob.svg");
+  }
+
+  &--to-close {
+    background-image: url("../../img/toggle_bg_mob.svg");
+  }
 }
 
 .cite-menu__item {
@@ -11,11 +59,44 @@
   letter-spacing: 0.1em;
 }
 
-.cite-menu__list--hidden {
+.cite-menu__contact {
   display: none;
 }
 
-.cite-menu__list--show {
-  display: block;
-  position: absolute;
+@media (min-width: @tablet-switch-width) {
+  .cite-menu__label {
+    margin-left: -15px;
+    padding: 15px 25px 12px;
+    font-size: @logo-fs-tablet;
+    line-height: 3.5;
+    letter-spacing: 0.25em;
+  }
+
+  .cite-menu__contact {
+    display: block;
+  }
+
+  .cite-menu__toggle {
+    &--to-open {
+      background-image: url("../../img/toggle_bg_tablet.svg");
+    }
+
+    &--to-close {
+      background-image: url("../../img/toggle_bg_tablet.svg");
+    }
+  }
+}
+
+@media (min-width: @desktop-switch-width) {
+  .cite-menu__label {
+    margin-left: -15px;
+    padding: 15px 25px 12px;
+    font-size: @logo-fs-desktop;
+    line-height: 3.5;
+    letter-spacing: 0.25em;
+  }
+
+  .cite-menu__toggle {
+    display: none;
+  }
 }
