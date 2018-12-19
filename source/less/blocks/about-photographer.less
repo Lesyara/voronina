@@ -7,16 +7,79 @@
   background-repeat: no-repeat;
 }
 
+.about-photographer .content-wrapper {
+  margin: 80px auto 0;
+}
+
+.about-photographer__info {
+  margin: 0;
+  padding-top: 370px;
+  padding-bottom: 20px;
+  line-height: 1.25;
+  text-align: center;
+}
+
 .about-photographer__contact {
+  line-height: 1;
+  text-align: center;
+}
+
+.about-photographer__contact a {
   text-decoration: none;
   color: @main-font-color;
+}
+
+.about-photographer__work-with-me {
+  padding-top: 30px;
+  padding-bottom: 5px;
+  text-align: center;
 }
 
 @media (min-width: @tablet-switch-width) {
   .about-photographer {
     font-size: @plain-text-fs-tablet;
-    background-image: url("../../img/about-photo-1-tablet.jpg"), url("../../img/about-photo-2-tablet.jpg");
-    background-position: center, center;
+    background-image: none;
+  }
+
+  .about-photographer .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-image: none;
+    flex-wrap: wrap;
+    margin: 210px auto 0;
+  }
+
+  .about-photographer__header {
+    flex-basis: 100%;
+  }
+
+  .about-photographer__item {
+    flex-basis: 282px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 440px;
+    text-align: left;
+  }
+
+  .about-photographer__info {
+    background-image: url("../../img/about-photo-1-tablet.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .about-photographer__contacts {
+    background-image: url("../../img/about-photo-2-tablet.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .about-photographer__contact {
+    text-align: left;
+  }
+
+  .about-photographer__work-with-me {
+    font-size: @plain-text-fs-tablet;
+    text-align: left;
   }
 }
 

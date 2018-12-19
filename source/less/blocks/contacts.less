@@ -2,6 +2,11 @@
   font-family: @bolder-main-font, @web-safe-serif-font, serif;
   font-size: @plain-text-fs-mob;
   color: @main-font-color;
+  text-align: center;
+}
+
+.contacts .content-wrapper {
+  margin: 100px auto 0;
 }
 
 .contacts__link {
@@ -10,9 +15,33 @@
   cursor: pointer;
 }
 
+.contacts__list {
+  margin: 0 auto;
+  text-align: center;
+  line-height: 2.5;
+  font-style: normal;
+}
+
+.contacts__social {
+  margin: 0;
+  font-style: normal;
+}
+
+.contacts__social-item {
+  display: inline-block;
+}
+
+.contacts__header {
+  padding-bottom: 25px;
+}
+
 @media (min-width: @tablet-switch-width) {
   .contacts {
     font-size: @plain-text-fs-tablet;
+  }
+
+  .contacts .content-wrapper {
+    margin: 170px auto 0;
   }
 }
 

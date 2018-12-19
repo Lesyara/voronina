@@ -1,11 +1,20 @@
+.portfolio-prewiew .content-wrapper {
+  margin-top: 80px;
+}
+
 .portfolio-prewiew__descr {
-  margin-top: -8px;
-  margin-bottom: 67px;
+  margin-top: -10px;
+  margin-bottom: 68px;
   font-family: @headers-font, @web-safe-serif-font, serif;
   font-size: @caption-fs-mob;
   color: @main-font-color;
   font-weight: 600;
   line-height: 1.25;
+  letter-spacing: 0.75px;
+}
+
+.portfolio-prewiew__item--branch-rest .portfolio-prewiew__descr {
+  margin-bottom: 50px;
 }
 
 .portfolio-prewiew__tag {
@@ -15,17 +24,48 @@
 }
 
 .portfolio-prewiew__header {
-  margin-top: 80px;
   text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0.05em;
-  padding-top: 54px;
-  padding-bottom: 43px;
 }
 
 @media (min-width: @tablet-switch-width) {
+  .portfolio-prewiew .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 152px;
+  }
+
+  .portfolio-prewiew__header {
+    flex-basis: 100%;
+  }
+
   .portfolio-prewiew__descr {
     font-size: @caption-fs-tablet;
+  }
+
+  .portfolio-prewiew__item--funky-food .portfolio-prewiew__descr {
+    margin-bottom: 30px;
+  }
+
+  .portfolio-prewiew__item {
+    &--lady-marm {
+      width: 240px;
+      margin-top: 100px;
+    }
+
+    &--funky-food {
+      width: 184px;
+    }
+
+    &--good-food {
+      width: 184px;
+    }
+
+    &--branch-rest {
+      width: 184px;
+      margin-top: 115px;
+    }
   }
 
   .portfolio-prewiew__img {

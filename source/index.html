@@ -37,20 +37,26 @@
           <li><a class="cite-menu__item">Контакты</a></li>
         </ul>
       </div>
-      <div class="introduction__text content-wrapper">
-        <h3 class="introduction__header">Дарья Воронина</h3>
-        <p class="introduction__descr">Food — фотограф и food — стилист
-          в Москве и Московской области</p>
-        <a class="introduction__works section-link">Портфолио</a>
-        <div class="introduction__links">
-          <a>instagram</a> — <a>facebook</a>
+      <div class="introduction__content content-wrapper">
+        <div class="introduction__text">
+          <h3 class="introduction__header">Дарья Воронина</h3>
+          <p class="introduction__descr">Food — фотограф и food — стилист
+            в Москве и Московской области</p>
+          <a class="introduction__works section-link">Портфолио</a>
+          <div class="introduction__links">
+            <a>instagram</a> — <a>facebook</a>
+          </div>
         </div>
+        <picture>
+          <source srcset="img/img-cover-tablet.jpg" media="(min-width: 1330px)">
+          <img class="introduction__img" width="327" height="499" src="img/img-cover-tablet.jpg" alt="Фото автора">
+        </picture>
       </div>
     </section>
     <section class="portfolio-prewiew">
       <div class="content-wrapper">
         <h2 class="portfolio-prewiew__header section-header">Портфолио</h2>
-        <figure class="portfolio-prewiew__item">
+        <figure class="portfolio-prewiew__item portfolio-prewiew__item--lady-marm">
           <picture>
             <source srcset="img/content/portfolio-photo-1-tablet.jpg" media="(min-width: 640px)">
             <source srcset="img/content/portfolio-photo-1-desktop.jpg" media="(min-width: 1330px)">
@@ -62,31 +68,33 @@
             <p class="portfolio-prewiew__descr">Фото контент для социальных сетей кондитерской «Леди Мармелад»</p>
           </figcaption>
         </figure>
-        <figure class="portfolio-prewiew__item">
-          <picture>
-            <source srcset="img/content/portfolio-photo-2-tablet.jpg" media="(min-width: 640px)">
-            <source srcset="img/content/portfolio-photo-2-desktop.jpg" media="(min-width: 1330px)">
-            <img class="portfolio-prewiew__img portfolio-prewiew__img--funky-food" width="290" height="374" src="img/content/portfolio-photo-2-mob.jpg"
-              alt="Фото для Funky Food">
-          </picture>
-          <figcaption>
-            <span class="portfolio-prewiew__tag">#соцсети</span>
-            <p class="portfolio-prewiew__descr">Фото контент для инстаграма ресторана «Funky Food»</p>
-          </figcaption>
-        </figure>
-        <figure class="portfolio-prewiew__item">
-          <picture>
-            <source srcset="img/content/portfolio-photo-3-tablet.jpg" media="(min-width: 640px)">
-            <source srcset="img/content/portfolio-photo-3-desktop.jpg" media="(min-width: 1330px)">
-            <img class="portfolio-prewiew__img portfolio-prewiew__img--good-food" width="290" height="374" src="img/content/portfolio-photo-3-mob.jpg"
-              alt="Меню ресторана Хорошая еда">
-          </picture>
-          <figcaption>
-            <span class="portfolio-prewiew__tag">#менюресторана</span>
-            <p class="portfolio-prewiew__descr">Съемка меню ресторана «Хорошая еда»</p>
-          </figcaption>
-        </figure>
-        <figure class="portfolio-prewiew__item">
+        <div class="portfolio-prewiew__item-wrapper">
+          <figure class="portfolio-prewiew__item portfolio-prewiew__item--funky-food">
+            <picture>
+              <source srcset="img/content/portfolio-photo-2-tablet.jpg" media="(min-width: 640px)">
+              <source srcset="img/content/portfolio-photo-2-desktop.jpg" media="(min-width: 1330px)">
+              <img class="portfolio-prewiew__img portfolio-prewiew__img--funky-food" width="290" height="374" src="img/content/portfolio-photo-2-mob.jpg"
+                alt="Фото для Funky Food">
+            </picture>
+            <figcaption>
+              <span class="portfolio-prewiew__tag">#соцсети</span>
+              <p class="portfolio-prewiew__descr">Фото контент для инстаграма ресторана «Funky Food»</p>
+            </figcaption>
+          </figure>
+          <figure class="portfolio-prewiew__item portfolio-prewiew__item--good-food">
+            <picture>
+              <source srcset="img/content/portfolio-photo-3-tablet.jpg" media="(min-width: 640px)">
+              <source srcset="img/content/portfolio-photo-3-desktop.jpg" media="(min-width: 1330px)">
+              <img class="portfolio-prewiew__img portfolio-prewiew__img--good-food" width="290" height="374" src="img/content/portfolio-photo-3-mob.jpg"
+                alt="Меню ресторана Хорошая еда">
+            </picture>
+            <figcaption>
+              <span class="portfolio-prewiew__tag">#менюресторана</span>
+              <p class="portfolio-prewiew__descr">Съемка меню ресторана «Хорошая еда»</p>
+            </figcaption>
+          </figure>
+        </div>
+        <figure class="portfolio-prewiew__item portfolio-prewiew__item--branch-rest">
           <picture>
             <source srcset="img/content/portfolio-photo-4-tablet.jpg" media="(min-width: 640px)">
             <source srcset="img/content/portfolio-photo-4-desktop.jpg" media="(min-width: 1330px)">
@@ -102,23 +110,32 @@
     </section>
     <section class="detailed-portfolio">
       <div class="content-wrapper">
-        <h2 class="detailed-portfolio__header section-header">Подробное портфолио</h2>
-        <p class="detailed-portfolio__descr">С описанием задач заказчика, полного процесса работы
-          и финальным результатом </p>
-        <a class="detailed-portfolio__download-link section-link">Скачать в PDF</a>
+        <picture>
+          <source srcset="img/content/detailed-portfolio-desktop.jpg" media="(min-width: 1330px)">
+          <img class="detailed-portfolio__img" width="422" height="274" src="img/content/detailed-portfolio-tablet.jpg" alt="Фото автора">
+        </picture>
+        <div class="detailed-portfolio__text">
+          <h2 class="detailed-portfolio__header section-header">Подробное портфолио</h2>
+          <p class="detailed-portfolio__descr">С описанием задач заказчика, полного процесса работы
+            и финальным результатом </p>
+          <a class="detailed-portfolio__download-link section-link">Скачать в PDF</a>
+        </div>
       </div>
     </section>
     <section class="about-photographer">
       <div class="content-wrapper">
         <h2 class="about-photographer__header section-header">Обо мне</h2>
-        <p class="about-photographer__info">Во всех фотосъемках еды, я работаю как фуд-фотограф и фуд-стилист.
+        <p class="about-photographer__item about-photographer__info">Во всех фотосъемках еды, я работаю как фуд-фотограф и фуд-стилист.
           Создаю креативные концепции, реализую ваши идеи. Разрабатываю рецепты,
           вкусно снимаю. Провожу обучение
         </p>
-        <div class="about-photographer__contacts">
-          Mail: <a class="about-photographer__mail about-photographer__contact" href="mailto:daria.voronina@gmail.com">daria.voronina@gmail.com</a>
-          Tel.: <a class="about-photographer__phone about-photographer__contact" href="tel:+ 7 916 66 77 112"> + 7 916
-            66 77 112</a>
+        <div class="about-photographer__item about-photographer__contacts">
+          <div class="about-photographer__contact">
+            Tel.:<a class="about-photographer__phone" href="tel:+ 7 916 66 77 112">+ 7 916 66 77 112</a>
+          </div>
+          <div class="about-photographer__contact">
+            Mail:<a class="about-photographer__mail" href="mailto:daria.voronina@gmail.com">daria.voronina@gmail.com</a>
+          </div>
           <a class="about-photographer__work-with-me section-link" href="#">Работать со мной</a>
         </div>
       </div>
@@ -165,7 +182,7 @@
             <img src="img/content/price-photo-3-mob.jpg" alt="Пример результата 1 часа съемки">
           </picture>
           <figcaption>
-            <div class="pricelist__caption"><span class="pricelist__caption-bold">1 час съемки</span> – 15 000 рублей</div>
+            <div class="pricelist__caption"><span class="pricelist__caption-bold">1 час съемки</span> – 4 000 рублей</div>
             <p class="pricelist__descr">Food - стилизация
               Использование реквизита
               Цветокоррекция

@@ -90,14 +90,25 @@ figure {
   margin: 0;
   font-family: @headers-font, @web-safe-serif-font, serif;
   font-size: @section-header-fs-mob;
+  text-align: center;
+  letter-spacing: 0.15em;
+  padding-top: 54px;
+  padding-bottom: 43px;
 }
 
 .section-link {
+  display: block;
   font-family: @links-font, @web-safe-ss-font, sans-serif;
   font-size: 14px;
+  color: @main-font-color;
   line-height: 1.5;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  text-decoration: none;
+  text-align: left;
   cursor: pointer;
+  padding-top: 30px;
+  padding-bottom: 5px;
 }
 
 @media (min-width: @tablet-switch-width) {
@@ -112,6 +123,8 @@ figure {
   }
 
   .section-header {
+    padding-top: 100px;
+    padding-bottom: 58px;
     font-size: @section-header-fs-tablet;
   }
 }

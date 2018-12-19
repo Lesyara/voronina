@@ -76,13 +76,24 @@ figure {
   margin: 0;
   font-family: "Source Serif Bold", "Lucida Bright", serif;
   font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  padding-top: 54px;
+  padding-bottom: 43px;
 }
 .section-link {
+  display: block;
   font-family: "MyriadPro-Bold", "Arial", sans-serif;
   font-size: 14px;
+  color: #212021;
   line-height: 1.5;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  text-decoration: none;
+  text-align: left;
   cursor: pointer;
+  padding-top: 30px;
+  padding-bottom: 5px;
 }
 @media (min-width: 640px) {
   body {
@@ -94,6 +105,8 @@ figure {
     width: 640px;
   }
   .section-header {
+    padding-top: 100px;
+    padding-bottom: 58px;
     font-size: 24px;
   }
 }
@@ -126,6 +139,12 @@ figure {
 .introduction__text {
   margin-top: 150px;
 }
+.introduction__descr {
+  margin: 0;
+}
+.introduction__img {
+  display: none;
+}
 .introduction--shaded {
   background-color: #f8f8f8;
 }
@@ -134,6 +153,9 @@ figure {
   font-size: 30px;
   font-weight: 600;
   line-height: 1.5;
+  color: #ffffff;
+}
+.introduction__works {
   color: #ffffff;
 }
 .introduction__links {
@@ -162,20 +184,45 @@ figure {
   .introduction {
     font-size: 16px;
     color: #212021;
-    background-image: url("../../img/cover-back-tablet.jpg"), url("../../img/img-cover-tablet.jpg");
-    background-position: right, center;
-    background-size: 308px auto, 327px auto;
+    background-image: url("../../img/cover-back-tablet.jpg");
+    background-position: right;
+    background-size: 308px auto;
+  }
+  .introduction__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .introduction__text {
+    max-width: 300px;
+    margin-top: 275px;
+  }
+  .introduction__img {
+    display: block;
+    width: 327px;
+    height: 499px;
   }
   .introduction__header {
     font-size: 36px;
     color: #212021;
   }
+  .introduction__descr {
+    margin-top: 20px;
+  }
+  .introduction__works {
+    color: #212021;
+    padding-bottom: 217px;
+  }
+  .introduction__links {
+    display: block;
+    padding-bottom: 74px;
+  }
 }
 @media (min-width: 1330px) {
   .introduction {
     font-size: 18px;
-    background-image: url("../../img/cover-back-desktop.jpg"), url("../../img/img-cover-desktop.jpg");
-    background-size: 606px auto, 348px auto;
+    background-image: url("../../img/img-cover-desktop.jpg"), url("../../img/cover-back-desktop.jpg");
+    background-size: 348px auto, 606px auto;
   }
   .introduction__header {
     font-size: 48px;
@@ -188,6 +235,8 @@ figure {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 .cite-menu--hidden {
   display: none;
@@ -209,11 +258,10 @@ figure {
   z-index: 100;
 }
 .cite-menu__toggle {
+  flex-basis: 25px;
   width: 25px;
   height: 14px;
   padding: 0;
-  margin-left: auto;
-  margin-top: 8px;
   font-size: 0;
   background-size: 25px 14px;
   background-position: 0 0;
@@ -242,14 +290,20 @@ figure {
 }
 @media (min-width: 640px) {
   .cite-menu__label {
-    margin-left: -15px;
-    padding: 15px 25px 12px;
-    font-size: 12px;
+    margin-left: -64px;
+    padding: 5px 44px 7px;
+    font-size: 14px;
     line-height: 3.5;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.4em;
   }
   .cite-menu__contact {
     display: block;
+    flex-basis: 117px;
+    margin: auto;
+  }
+  .cite-menu__toggle {
+    margin: auto;
+    margin-left: 114px;
   }
   .cite-menu__toggle--to-open {
     background-image: url("../../img/toggle_bg_tablet.svg");
@@ -278,34 +332,68 @@ figure {
   background-repeat: no-repeat;
   background-position: top right;
 }
-.detailed-portfolio__header {
-  margin-top: 70px;
-  padding-top: 118px;
-}
 .detailed-portfolio .content-wrapper {
   width: 240px;
+  margin-top: 55px;
+}
+.detailed-portfolio__header {
+  padding-top: 118px;
+  padding-bottom: 12px;
+  text-align: left;
 }
 .detailed-portfolio__descr {
+  margin: 0;
   line-height: 1.25;
-  margin-bottom: 28px;
 }
 .detailed-portfolio__download-link {
-  letter-spacing: 0.1em;
   padding-bottom: 128px;
-  display: inline-block;
-  width: 100%;
+  color: #ffffff;
+}
+.detailed-portfolio__img {
+  display: none;
 }
 @media (min-width: 640px) {
   .detailed-portfolio {
     color: #212021;
     font-size: 16px;
-    background-image: url("../../img/portfolio-section-back-tablet.jpg");
+    background-image: linear-gradient(to right, #f8f8f8 20%, #f8f8f8 20% 80%, transparent 80%);
+    background-size: auto 300px;
+    background-position: top left;
+  }
+  .detailed-portfolio .content-wrapper {
+    position: relative;
+    width: 640px;
+    margin-top: 77px;
+    padding-top: 28px;
+  }
+  .detailed-portfolio__download-link {
+    padding-top: 22px;
+    padding-bottom: 113px;
+    font-size: 16px;
+    color: #212021;
+  }
+  .detailed-portfolio__img {
+    display: block;
+    position: absolute;
+    width: 422px;
+    height: 274px;
+    top: 63px;
+    left: -223px;
+  }
+  .detailed-portfolio__header {
+    padding-top: 60px;
+    letter-spacing: 0.05em;
+  }
+  .detailed-portfolio__text {
+    border: 8px solid #8eb574;
+    margin-left: 58px;
+    padding-left: 155px;
+    padding-right: 140px;
   }
 }
 @media (min-width: 1330px) {
   .detailed-portfolio {
     font-size: 18px;
-    background-image: url("../../img/portfolio-section-back-desktop.jpg");
   }
 }
 .about-photographer {
@@ -316,15 +404,67 @@ figure {
   background-position: right, left;
   background-repeat: no-repeat;
 }
+.about-photographer .content-wrapper {
+  margin: 80px auto 0;
+}
+.about-photographer__info {
+  margin: 0;
+  padding-top: 370px;
+  padding-bottom: 20px;
+  line-height: 1.25;
+  text-align: center;
+}
 .about-photographer__contact {
+  line-height: 1;
+  text-align: center;
+}
+.about-photographer__contact a {
   text-decoration: none;
   color: #212021;
+}
+.about-photographer__work-with-me {
+  padding-top: 30px;
+  padding-bottom: 5px;
+  text-align: center;
 }
 @media (min-width: 640px) {
   .about-photographer {
     font-size: 16px;
-    background-image: url("../../img/about-photo-1-tablet.jpg"), url("../../img/about-photo-2-tablet.jpg");
-    background-position: center, center;
+    background-image: none;
+  }
+  .about-photographer .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-image: none;
+    flex-wrap: wrap;
+    margin: 210px auto 0;
+  }
+  .about-photographer__header {
+    flex-basis: 100%;
+  }
+  .about-photographer__item {
+    flex-basis: 282px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 440px;
+    text-align: left;
+  }
+  .about-photographer__info {
+    background-image: url("../../img/about-photo-1-tablet.jpg");
+    background-repeat: no-repeat;
+  }
+  .about-photographer__contacts {
+    background-image: url("../../img/about-photo-2-tablet.jpg");
+    background-repeat: no-repeat;
+  }
+  .about-photographer__contact {
+    text-align: left;
+  }
+  .about-photographer__work-with-me {
+    font-size: 16px;
+    text-align: left;
   }
 }
 @media (min-width: 1330px) {
@@ -339,18 +479,57 @@ figure {
   font-size: 14px;
   color: #212021;
 }
+.pricelist .content-wrapper {
+  margin-top: 80px;
+}
 .pricelist__caption {
+  max-width: 220px;
+  margin: 10px auto 5px;
   font-family: "Source Serif Pro Regular", "Lucida Bright", serif;
   font-size: 18px;
   color: #8eb574;
+  text-align: right;
+  line-height: 1.25;
 }
 .pricelist__caption-bold {
+  display: block;
   font-family: "Source Serif Bold", "Lucida Bright", serif;
   font-weight: 700;
+  text-align: left;
+}
+.pricelist__descr {
+  max-width: 240px;
+  margin: 0 auto 70px;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: 0.015em;
 }
 @media (min-width: 640px) {
+  .pricelist .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 140px;
+    min-height: 960px;
+  }
+  .pricelist__header {
+    flex-basis: 100%;
+  }
   .pricelist__caption {
     font-size: 16px;
+  }
+  .pricelist__item--1hour {
+    flex-basis: 181px;
+    align-self: center;
+  }
+  .pricelist__item--4hours {
+    flex-basis: 186px;
+    margin-top: -30px;
+  }
+  .pricelist__item--12hours {
+    flex-basis: 240px;
+    margin-top: auto;
   }
 }
 @media (min-width: 1330px) {
@@ -361,14 +540,21 @@ figure {
     font-size: 24px;
   }
 }
+.portfolio-prewiew .content-wrapper {
+  margin-top: 80px;
+}
 .portfolio-prewiew__descr {
-  margin-top: -8px;
-  margin-bottom: 67px;
+  margin-top: -10px;
+  margin-bottom: 68px;
   font-family: "Source Serif Bold", "Lucida Bright", serif;
   font-size: 18px;
   color: #212021;
   font-weight: 600;
   line-height: 1.25;
+  letter-spacing: 0.75px;
+}
+.portfolio-prewiew__item--branch-rest .portfolio-prewiew__descr {
+  margin-bottom: 50px;
 }
 .portfolio-prewiew__tag {
   font-family: "Source Serif Light", "Lucida Bright", serif;
@@ -376,16 +562,38 @@ figure {
   line-height: 3.2;
 }
 .portfolio-prewiew__header {
-  margin-top: 80px;
   text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0.05em;
-  padding-top: 54px;
-  padding-bottom: 43px;
 }
 @media (min-width: 640px) {
+  .portfolio-prewiew .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 152px;
+  }
+  .portfolio-prewiew__header {
+    flex-basis: 100%;
+  }
   .portfolio-prewiew__descr {
     font-size: 16px;
+  }
+  .portfolio-prewiew__item--funky-food .portfolio-prewiew__descr {
+    margin-bottom: 30px;
+  }
+  .portfolio-prewiew__item--lady-marm {
+    width: 240px;
+    margin-top: 100px;
+  }
+  .portfolio-prewiew__item--funky-food {
+    width: 184px;
+  }
+  .portfolio-prewiew__item--good-food {
+    width: 184px;
+  }
+  .portfolio-prewiew__item--branch-rest {
+    width: 184px;
+    margin-top: 115px;
   }
   .portfolio-prewiew__img--lady-marm {
     width: 240px;
@@ -446,15 +654,38 @@ desktop:
   font-family: "Source Serif Pro Regular", "Lucida Bright", serif;
   font-size: 14px;
   color: #212021;
+  text-align: center;
+}
+.contacts .content-wrapper {
+  margin: 100px auto 0;
 }
 .contacts__link {
   text-decoration: none;
   color: #212021;
   cursor: pointer;
 }
+.contacts__list {
+  margin: 0 auto;
+  text-align: center;
+  line-height: 2.5;
+  font-style: normal;
+}
+.contacts__social {
+  margin: 0;
+  font-style: normal;
+}
+.contacts__social-item {
+  display: inline-block;
+}
+.contacts__header {
+  padding-bottom: 25px;
+}
 @media (min-width: 640px) {
   .contacts {
     font-size: 16px;
+  }
+  .contacts .content-wrapper {
+    margin: 170px auto 0;
   }
 }
 @media (min-width: 640px) {

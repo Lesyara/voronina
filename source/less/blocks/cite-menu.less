@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
 
   &--hidden {
     display: none;
@@ -27,11 +29,10 @@
 }
 
 .cite-menu__toggle {
+  flex-basis: 25px;
   width: 25px;
   height: 14px;
   padding: 0;
-  margin-left: auto;
-  margin-top: 8px;
   font-size: 0;
   background-size: 25px 14px;
   background-position: 0 0;
@@ -65,18 +66,23 @@
 
 @media (min-width: @tablet-switch-width) {
   .cite-menu__label {
-    margin-left: -15px;
-    padding: 15px 25px 12px;
+    margin-left: -64px;
+    padding: 5px 44px 7px;
     font-size: @logo-fs-tablet;
     line-height: 3.5;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.4em;
   }
 
   .cite-menu__contact {
     display: block;
+    flex-basis: 117px;
+    margin: auto;
   }
 
   .cite-menu__toggle {
+    margin: auto;
+    margin-left: 114px;
+
     &--to-open {
       background-image: url("../../img/toggle_bg_tablet.svg");
     }

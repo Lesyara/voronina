@@ -4,20 +4,68 @@
   color: @main-font-color;
 }
 
+.pricelist .content-wrapper {
+  margin-top: 80px;
+}
+
 .pricelist__caption {
+  max-width: 220px;
+  margin: 10px auto 5px;
   font-family: @bolder-main-font, @web-safe-serif-font, serif;
   font-size: @caption-fs-mob;
   color: @accent-font-color;
+  text-align: right;
+  line-height: 1.25;
 }
 
 .pricelist__caption-bold {
+  display: block;
   font-family: @headers-font, @web-safe-serif-font, serif;
   font-weight: 700;
+  text-align: left;
+}
+
+.pricelist__descr {
+  max-width: 240px;
+  margin: 0 auto 70px;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: 0.015em;
 }
 
 @media (min-width: @tablet-switch-width) {
+  .pricelist .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 140px;
+    min-height: 960px;
+  }
+
+  .pricelist__header {
+    flex-basis: 100%;
+  }
+
   .pricelist__caption {
     font-size: @caption-fs-tablet;
+  }
+
+  .pricelist__item {
+    &--1hour {
+      flex-basis: 181px;
+      align-self: center;
+    }
+
+    &--4hours {
+      flex-basis: 186px;
+      margin-top: -30px;
+    }
+
+    &--12hours {
+      flex-basis: 240px;
+      margin-top: auto;
+    }
   }
 }
 

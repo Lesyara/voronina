@@ -17,6 +17,14 @@
   margin-top: 150px;
 }
 
+.introduction__descr {
+  margin: 0;
+}
+
+.introduction__img {
+  display: none;
+}
+
 .introduction--shaded {
   background-color: @section-back-color;
 }
@@ -26,6 +34,10 @@
   font-size: @header-fs-mob;
   font-weight: 600;
   line-height: 1.5;
+  color: @third-font-color;
+}
+
+.introduction__works {
   color: @third-font-color;
 }
 
@@ -59,22 +71,53 @@
   .introduction {
     font-size: 16px;
     color: @main-font-color;
-    background-image: url("../../img/cover-back-tablet.jpg"), url("../../img/img-cover-tablet.jpg");
-    background-position: right, center;
-    background-size: 308px auto, 327px auto;
+    background-image: url("../../img/cover-back-tablet.jpg");
+    background-position: right;
+    background-size: 308px auto;
+  }
+
+  .introduction__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .introduction__text {
+    max-width: 300px;
+    margin-top: 275px;
+  }
+
+  .introduction__img {
+    display: block;
+    width: 327px;
+    height: 499px;
   }
 
   .introduction__header {
     font-size: @header-fs-tablet;
     color: @main-font-color;
   }
+
+  .introduction__descr {
+    margin-top: 20px;
+  }
+
+  .introduction__works {
+    color: @main-font-color;
+    padding-bottom: 217px;
+  }
+
+  .introduction__links {
+    display: block;
+    padding-bottom: 74px;
+  }
 }
 
 @media (min-width: @desktop-switch-width) {
   .introduction {
     font-size: 18px;
-    background-image: url("../../img/cover-back-desktop.jpg"), url("../../img/img-cover-desktop.jpg");
-    background-size: 606px auto, 348px auto;
+    background-image: url("../../img/img-cover-desktop.jpg"), url("../../img/cover-back-desktop.jpg");
+    background-size: 348px auto, 606px auto;
   }
 
   .introduction__header {
