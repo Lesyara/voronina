@@ -7,42 +7,16 @@
   color: @third-font-color;
   text-transform: none;
   background-image: url("../../img/img-cover-mob.jpg");
-  background-size: 320px auto;
+  background-size: cover;
   background-color: @section-back-color;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.introduction__text {
-  margin-top: 150px;
-}
-
-.introduction__descr {
-  margin: 0;
-}
-
-.introduction__img {
-  display: none;
 }
 
 .introduction--shaded {
   background-color: @section-back-color;
 }
 
-.introduction__header {
-  margin: 0;
-  font-size: @header-fs-mob;
-  font-weight: 600;
-  line-height: 1.5;
-  color: @third-font-color;
-}
-
-.introduction__works {
-  color: @third-font-color;
-}
-
-.introduction__links {
-  display: none;
+.introduction__menu {
+  width: 100%;
 }
 
 .introduction__menu .cite-menu__list {
@@ -67,11 +41,40 @@
   margin: 0 auto;
 }
 
+.introduction__text {
+  margin-top: 150px;
+}
+
+.introduction__header {
+  margin: 0;
+  font-size: @header-fs-mob;
+  font-weight: 600;
+  line-height: 1.5;
+  color: @third-font-color;
+}
+
+.introduction__descr {
+  margin: 0;
+}
+
+.introduction__img {
+  display: none;
+}
+
+.introduction__works {
+  color: @third-font-color;
+}
+
+.introduction__links {
+  display: none;
+}
+
 @media (min-width: @tablet-switch-width) {
   .introduction {
     font-size: 16px;
     color: @main-font-color;
     background-image: url("../../img/cover-back-tablet.jpg");
+    background-repeat: no-repeat;
     background-position: right;
     background-size: 308px auto;
   }
@@ -87,15 +90,16 @@
     margin-top: 275px;
   }
 
+  .introduction__header {
+    font-size: @header-fs-tablet;
+    color: @main-font-color;
+  }
+
   .introduction__img {
     display: block;
     width: 327px;
     height: 499px;
-  }
-
-  .introduction__header {
-    font-size: @header-fs-tablet;
-    color: @main-font-color;
+    margin-bottom: 60px;
   }
 
   .introduction__descr {
@@ -109,22 +113,55 @@
 
   .introduction__links {
     display: block;
-    padding-bottom: 74px;
+    margin-bottom: 74px;
   }
 }
 
 @media (min-width: @desktop-switch-width) {
   .introduction {
     font-size: 18px;
-    background-image: url("../../img/img-cover-desktop.jpg"), url("../../img/cover-back-desktop.jpg");
-    background-size: 348px auto, 606px auto;
+    background-image: url("../../img/cover-back-desktop.jpg");
+    background-size: 606px auto;
+    background-position: top right;
+  }
+
+  .introduction__menu .cite-menu__list {
+    display: block;
+  }
+
+  .introduction__content {
+    justify-content: flex-start;
+  }
+
+  .introduction__text {
+    flex-basis: 400px;
+    max-width: 400px;
+    margin-top: 220px;
+    margin-left: 24px;
+  }
+
+  .introduction__works {
+    padding-top: 23px;
+    padding-bottom: 237px;
+  }
+
+  .introduction__links {
+    margin-bottom: 30px;
   }
 
   .introduction__header {
     font-size: @header-fs-desktop;
   }
 
-  .introduction__menu .cite-menu__list {
-    display: block;
+  .introduction__img {
+    width: 348px;
+    height: 533px;
+    margin-bottom: 10px;
+    margin-left: 105px;
+  }
+
+  .introduction__descr {
+    margin-top: 14px;
+    max-width: 300px;
   }
 }

@@ -88,27 +88,27 @@ figure {
 
 .section-header {
   margin: 0;
+  padding-top: 54px;
+  padding-bottom: 43px;
   font-family: @headers-font, @web-safe-serif-font, serif;
   font-size: @section-header-fs-mob;
   text-align: center;
   letter-spacing: 0.15em;
-  padding-top: 54px;
-  padding-bottom: 43px;
 }
 
 .section-link {
   display: block;
+  padding-top: 30px;
+  padding-bottom: 5px;
   font-family: @links-font, @web-safe-ss-font, sans-serif;
-  font-size: 14px;
-  color: @main-font-color;
+  font-size: @section-link-fs-mob;
   line-height: 1.5;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
   text-align: left;
+  color: @main-font-color;
   cursor: pointer;
-  padding-top: 30px;
-  padding-bottom: 5px;
 }
 
 @media (min-width: @tablet-switch-width) {
@@ -141,5 +141,9 @@ figure {
 
   .section-header {
     font-size: @section-header-fs-desktop;
+  }
+
+  .section-link {
+    font-size: @section-link-fs-desktop;
   }
 }
