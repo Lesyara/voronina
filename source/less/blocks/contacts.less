@@ -41,12 +41,31 @@
   }
 
   .contacts .content-wrapper {
-    margin: 170px auto 0;
+    margin: 244px auto 0;
+  }
+
+  .contacts__list {
+    margin-top: 40px;
+    margin-bottom: 43px;
+    line-height: 2.7;
   }
 }
 
-@media (min-width: @tablet-switch-width) {
+@media (min-width: @desktop-switch-width) {
   .contacts {
     font-size: @plain-text-fs-desktop;
+  }
+
+  .contacts .content-wrapper {
+    margin: 124px auto 0;
+  }
+
+  .contacts__list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    margin-top: 56px;
+    margin-bottom: 59px;
   }
 }

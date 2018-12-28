@@ -11,12 +11,20 @@
   margin: 80px auto 0;
 }
 
+.about-photographer__text-wrapper {
+  padding-top: 350px;
+}
+
 .about-photographer__info {
   margin: 0;
-  padding-top: 370px;
+  padding-top: 20px;
   padding-bottom: 20px;
   line-height: 1.25;
   text-align: center;
+}
+
+.about-photographer__offers {
+  display: none;
 }
 
 .about-photographer__contact {
@@ -42,12 +50,6 @@
   }
 
   .about-photographer .content-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-image: none;
-    flex-wrap: wrap;
     margin: 210px auto 0;
   }
 
@@ -55,11 +57,19 @@
     flex-basis: 100%;
   }
 
+  .about-photographer__text-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-image: none;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
   .about-photographer__item {
     flex-basis: 282px;
-    padding-left: 13px;
-    padding-right: 13px;
-    padding-top: 440px;
+    padding: 440px 13px 0;
     text-align: left;
   }
 
@@ -86,7 +96,56 @@
 @media (min-width: @desktop-switch-width) {
   .about-photographer {
     font-size: @plain-text-fs-desktop;
-    background-image: url("../../img/about-photo-1-tablet.jpg"), url("../../img/about-photo-2-tablet.jpg");
-    background-position: center, center;
+    background-image: linear-gradient(to right, @section-back-color 0%, @section-back-color 0% 26%, transparent 26%);
+    background-repeat: no-repeat;
+    background-size: auto 338px;
+    background-position: 0% 45%;
+  }
+
+  .about-photographer .content-wrapper {
+    flex-direction: column;
+    width: 1100px;
+    margin-top: 128px;
+    background-image: url("../../img/about-photo-1-desktop.jpg"), url("../../img/about-photo-2-desktop.jpg"), linear-gradient(to right, transparent 0%, transparent 0% 45%, @section-back-color 45%);
+    background-position: left 68%, 44% 81%, bottom right;
+    background-size: 316px 431px, 316px 431px, auto 483px;
+    background-repeat: no-repeat;
+  }
+
+  .about-photographer__text-wrapper {
+    display: flex;
+    max-width: 390px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-left: auto;
+    background-image: none;
+  }
+
+  .about-photographer__header {
+    width: 100%;
+    padding-bottom: 35px;
+  }
+
+  .about-photographer__item {
+    padding: 0 90px 0 0;
+    background-image: none;
+  }
+
+  .about-photographer__info {
+    padding-top: 180px;
+    flex-basis: 156px;
+  }
+
+  .about-photographer__offers {
+    display: block;
+    margin: 0;
+    flex-basis: 82px;
+  }
+
+  .about-photographer__contacts {
+    flex-basis: 120px;
+    padding-bottom: 70px;
   }
 }

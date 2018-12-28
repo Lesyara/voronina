@@ -92,12 +92,41 @@
 }
 
 @media (min-width: @desktop-switch-width) {
+  .portfolio-prewiew .content-wrapper {
+    width: 1100px;
+    margin-top: 140px;
+  }
+
   .portfolio-prewiew__descr {
     font-size: @caption-fs-desktop;
   }
 
+  .portfolio-prewiew__item--funky-food .portfolio-prewiew__descr {
+    margin-bottom: 94px;
+  }
+
   .portfolio-prewiew__tag {
     font-size: @label-fs-desktop;
+  }
+
+  .portfolio-prewiew__item {
+    &--lady-marm {
+      width: 414px;
+      margin-top: 170px;
+    }
+
+    &--funky-food {
+      width: 317px;
+    }
+
+    &--good-food {
+      width: 317px;
+    }
+
+    &--branch-rest {
+      width: 315px;
+      margin-top: 200px;
+    }
   }
 
   .portfolio-prewiew__img {

@@ -36,7 +36,7 @@
   .detailed-portfolio {
     color: @main-font-color;
     font-size: @plain-text-fs-tablet;
-    background-image: linear-gradient(to right, @section-back-color 20%, @section-back-color 20% 80%, transparent 80%);
+    background-image: linear-gradient(to right, @section-back-color 0%, @section-back-color 0% 80%, transparent 80%);
     background-size: auto 300px;
     background-position: top left;
   }
@@ -70,7 +70,6 @@
   }
 
   .detailed-portfolio__text {
-    //width: 100%;
     border: 8px solid #8eb574;
     margin-left: 58px;
     padding-left: 155px;
@@ -81,5 +80,38 @@
 @media (min-width: @desktop-switch-width) {
   .detailed-portfolio {
     font-size: @plain-text-fs-desktop;
+    background-image: linear-gradient(to right, @section-back-color 0%, @section-back-color 0% 67%, transparent 67%);
+    background-size: auto 375px;
+  }
+
+  .detailed-portfolio .content-wrapper {
+    width: 815px;
+    margin-top: 95px;
+    padding-top: 38px;
+  }
+
+  .detailed-portfolio__header {
+    padding-top: 92px;
+    font-size: @section-header-fs-tablet;
+  }
+
+  .detailed-portfolio__text {
+    margin-left: 105px;
+    padding-left: 215px;
+    padding-right: 155px;
+  }
+
+  .detailed-portfolio__download-link {
+    padding-top: 40px;
+    padding-bottom: 182px;
+  }
+
+  .detailed-portfolio__img {
+    display: block;
+    position: absolute;
+    width: 611px;
+    height: 373px;
+    top: 86px;
+    left: -313px;
   }
 }

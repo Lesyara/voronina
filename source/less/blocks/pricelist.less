@@ -39,33 +39,45 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 140px;
-    min-height: 960px;
+    margin-top: 160px;
+    //min-height: 960px;
   }
 
   .pricelist__header {
     flex-basis: 100%;
   }
 
-  .pricelist__caption {
-    font-size: @caption-fs-tablet;
-  }
-
   .pricelist__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     &--1hour {
+      //min-height: 460px;
       flex-basis: 181px;
-      align-self: center;
+      margin-top: 165px;
     }
 
     &--4hours {
+      //min-height: 420px;
       flex-basis: 186px;
-      margin-top: -30px;
+      margin-top: 47px;
     }
 
     &--12hours {
+      //min-height: 540px;
       flex-basis: 240px;
-      margin-top: auto;
+      margin-top: 150px;
     }
+  }
+
+  .pricelist__caption {
+    max-width: 190px;
+    font-size: @caption-fs-tablet;
+  }
+
+  .pricelist__descr {
+    margin: 0 auto;
   }
 }
 
@@ -74,7 +86,40 @@
     font-size: @plain-text-fs-desktop;
   }
 
+  .pricelist .content-wrapper {
+    width: 1100px;
+    //min-height: 1465px;
+    margin-top: 100px;
+  }
+
+  .pricelist__item {
+    &--1hour {
+      flex-basis: 315px;
+      margin-top: 292px;
+    }
+
+    &--4hours {
+      flex-basis: 317px;
+      margin-top: 92px;
+    }
+
+    &--12hours {
+      flex-basis: 414px;
+      margin-top: 264px;
+    }
+  }
+
   .pricelist__caption {
+    max-width: 260px;
+    margin: 23px auto;
     font-size: @caption-fs-desktop;
+  }
+
+  .pricelist__caption-bold {
+    font-size: @caption-accent-fs-desktop;
+  }
+
+  .pricelist__descr {
+    max-width: 330px;
   }
 }
