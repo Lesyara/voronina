@@ -50,7 +50,7 @@ body {
   margin: 0 auto;
   padding: 0;
   font-family: @main-font, @web-safe-serif-font, serif;
-  font-size: 14px;
+  font-size: @plain-text-fs-mob;
   line-height: 1.5;
   font-weight: 400;
   color: @main-font-color;
@@ -97,9 +97,10 @@ figure {
 }
 
 .section-link {
-  display: block;
-  padding-top: 30px;
-  padding-bottom: 5px;
+  display: inline-block;
+  padding-top: 26px;
+  padding-bottom: 1px;
+  border-bottom: 2px solid;
   font-family: @links-font, @web-safe-ss-font, sans-serif;
   font-size: @section-link-fs-mob;
   line-height: 1.5;
@@ -111,10 +112,17 @@ figure {
   cursor: pointer;
 }
 
+.section-link__decor {
+  margin-left: 6px;
+  font-size: 25px;
+  line-height: 1;
+}
+
 @media (min-width: @tablet-switch-width) {
   body {
+    font-size: @plain-text-fs-tablet;
     background-image: url("../img/back-tablet.jpg");
-    background-position: center;
+    background-position: top center;
     background-size: 764px auto;
   }
 
@@ -127,10 +135,15 @@ figure {
     padding-bottom: 58px;
     font-size: @section-header-fs-tablet;
   }
+
+  .section-link {
+    letter-spacing: 0.2em;
+  }
 }
 
 @media (min-width: @desktop-switch-width) {
   body {
+    font-size: @plain-text-fs-desktop;
     background-image: url("../img/back-desktop.jpg");
     background-size: 1440px auto;
   }
@@ -147,6 +160,8 @@ figure {
   }
 
   .section-link {
+    padding-top: 20px;
     font-size: @section-link-fs-desktop;
+    letter-spacing: 0.1em;
   }
 }

@@ -1,7 +1,7 @@
 .introduction {
   position: relative;
   min-height: 480px;
-  font-size: 14px;
+  font-size: @plain-text-fs-mob;
   line-height: 1.5;
   font-weight: 300;
   color: @third-font-color;
@@ -107,13 +107,16 @@
   }
 
   .introduction__works {
+    margin-bottom: 217px;
     color: @main-font-color;
-    padding-bottom: 217px;
   }
 
   .introduction__links {
     display: block;
     margin-bottom: 74px;
+    font-size: @social-links-fs-tablet;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
   }
 }
 
@@ -141,12 +144,12 @@
   }
 
   .introduction__works {
-    padding-top: 23px;
-    padding-bottom: 237px;
+    margin-bottom: 237px;
   }
 
   .introduction__links {
     margin-bottom: 30px;
+    font-size: @social-links-fs-desktop;
   }
 
   .introduction__header {

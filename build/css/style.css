@@ -82,9 +82,10 @@ figure {
   letter-spacing: 0.15em;
 }
 .section-link {
-  display: block;
-  padding-top: 30px;
-  padding-bottom: 5px;
+  display: inline-block;
+  padding-top: 26px;
+  padding-bottom: 1px;
+  border-bottom: 2px solid;
   font-family: "MyriadPro-Bold", "Arial", sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -95,10 +96,16 @@ figure {
   color: #212021;
   cursor: pointer;
 }
+.section-link__decor {
+  margin-left: 6px;
+  font-size: 25px;
+  line-height: 1;
+}
 @media (min-width: 640px) {
   body {
+    font-size: 16px;
     background-image: url("../img/back-tablet.jpg");
-    background-position: center;
+    background-position: top center;
     background-size: 764px auto;
   }
   .content-wrapper {
@@ -109,9 +116,13 @@ figure {
     padding-bottom: 58px;
     font-size: 24px;
   }
+  .section-link {
+    letter-spacing: 0.2em;
+  }
 }
 @media (min-width: 1180px) {
   body {
+    font-size: 18px;
     background-image: url("../img/back-desktop.jpg");
     background-size: 1440px auto;
   }
@@ -125,7 +136,9 @@ figure {
     font-size: 36px;
   }
   .section-link {
+    padding-top: 20px;
     font-size: 16px;
+    letter-spacing: 0.1em;
   }
 }
 .introduction {
@@ -219,12 +232,15 @@ figure {
     margin-top: 20px;
   }
   .introduction__works {
+    margin-bottom: 217px;
     color: #212021;
-    padding-bottom: 217px;
   }
   .introduction__links {
     display: block;
     margin-bottom: 74px;
+    font-size: 12px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
   }
 }
 @media (min-width: 1180px) {
@@ -247,11 +263,11 @@ figure {
     margin-left: 24px;
   }
   .introduction__works {
-    padding-top: 23px;
-    padding-bottom: 237px;
+    margin-bottom: 237px;
   }
   .introduction__links {
     margin-bottom: 30px;
+    font-size: 14px;
   }
   .introduction__header {
     font-size: 48px;
@@ -293,10 +309,9 @@ figure {
   z-index: 100;
 }
 .cite-menu__toggle {
-  flex-basis: 25px;
-  width: 25px;
-  height: 14px;
-  padding: 0;
+  flex-basis: 23px;
+  padding: 10px 0;
+  margin-right: 16px;
   font-size: 0;
   background-size: 25px 14px;
   background-position: 0 0;
@@ -390,6 +405,9 @@ figure {
   width: 240px;
   margin-top: 55px;
 }
+.detailed-portfolio__text {
+  padding-bottom: 128px;
+}
 .detailed-portfolio__header {
   padding-top: 118px;
   padding-bottom: 12px;
@@ -400,7 +418,6 @@ figure {
   line-height: 1.25;
 }
 .detailed-portfolio__download-link {
-  padding-bottom: 128px;
   color: #ffffff;
 }
 .detailed-portfolio__img {
@@ -421,8 +438,7 @@ figure {
     padding-top: 28px;
   }
   .detailed-portfolio__download-link {
-    padding-top: 22px;
-    padding-bottom: 113px;
+    padding-top: 19px;
     font-size: 16px;
     color: #212021;
   }
@@ -443,6 +459,7 @@ figure {
     margin-left: 58px;
     padding-left: 155px;
     padding-right: 140px;
+    padding-bottom: 110px;
   }
 }
 @media (min-width: 1180px) {
@@ -464,10 +481,10 @@ figure {
     margin-left: 105px;
     padding-left: 215px;
     padding-right: 155px;
+    padding-bottom: 182px;
   }
   .detailed-portfolio__download-link {
-    padding-top: 40px;
-    padding-bottom: 182px;
+    padding-top: 35px;
   }
   .detailed-portfolio__img {
     display: block;
@@ -501,6 +518,9 @@ figure {
 }
 .about-photographer__offers {
   display: none;
+}
+.about-photographer__contacts {
+  text-align: center;
 }
 .about-photographer__contact {
   line-height: 1;
@@ -603,6 +623,9 @@ figure {
   .about-photographer__contacts {
     flex-basis: 120px;
     padding-bottom: 70px;
+  }
+  .about-photographer__work-with-me {
+    padding-top: 41px;
   }
 }
 .pricelist {
