@@ -47,9 +47,12 @@
 
 .introduction__header {
   margin: 0;
+  line-height: 1.5;
+}
+
+.introduction__header-text {
   font-size: @header-fs-mob;
   font-weight: 600;
-  line-height: 1.5;
   color: @third-font-color;
 }
 
@@ -71,12 +74,12 @@
 
 @media (min-width: @tablet-switch-width) {
   .introduction {
-    font-size: 16px;
+    font-size: @plain-text-fs-tablet;
     color: @main-font-color;
-    background-image: url("../../img/cover-back-tablet.jpg");
+    background-image: url("../../img/cover-back-tablet.png");
     background-repeat: no-repeat;
-    background-position: right;
-    background-size: 308px auto;
+    background-position: calc(100% + 148px) 0;
+    background-size: contain;
   }
 
   .introduction__content {
@@ -91,8 +94,36 @@
   }
 
   .introduction__header {
+    position: relative;
+  }
+
+  .introduction__header-text {
     font-size: @header-fs-tablet;
     color: @main-font-color;
+    z-index: 100;
+    position: relative;
+  }
+
+  .introduction__header::before {
+    content: "Food";
+    font-size: 48px;
+    color: #fff;
+    font-family: @headers-font, @web-safe-serif-font, serif;
+    position: absolute;
+    top: -21px;
+    left: -42px;
+    z-index: 0;
+  }
+
+  .introduction__header::after {
+    content: "Photography";
+    font-size: 48px;
+    color: #fff;
+    font-family: @headers-font, @web-safe-serif-font, serif;
+    position: absolute;
+    top: 9px;
+    left: 32px;
+    z-index: 0;
   }
 
   .introduction__img {
@@ -109,6 +140,7 @@
   .introduction__works {
     margin-bottom: 217px;
     color: @main-font-color;
+    letter-spacing: 0.2em;
   }
 
   .introduction__links {
@@ -122,29 +154,39 @@
 
 @media (min-width: @desktop-switch-width) {
   .introduction {
-    font-size: 18px;
-    background-image: url("../../img/cover-back-desktop.jpg");
-    background-size: 606px auto;
+    position: relative;
+    font-size: @plain-text-fs-desktop;
+    background-image: url("../../img/cover-back-desktop.png");
+    background-size: 685px auto;
     background-position: top right;
   }
 
   .introduction__menu .cite-menu__list {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    min-width: 460px;
+    background-image: linear-gradient(to bottom, transparent, transparent 55%, #fff 55%, #fff 60%, transparent 60%, transparent);
   }
 
   .introduction__content {
+    width: 1132px;
     justify-content: flex-start;
+  }
+
+  .introduction__section-counter {
+    top: 276px;
+    left: 1.5%;
   }
 
   .introduction__text {
     flex-basis: 400px;
     max-width: 400px;
     margin-top: 220px;
-    margin-left: 24px;
   }
 
   .introduction__works {
     margin-bottom: 237px;
+    letter-spacing: 0.1em;
   }
 
   .introduction__links {
@@ -152,8 +194,30 @@
     font-size: @social-links-fs-desktop;
   }
 
-  .introduction__header {
+  .introduction__header-text {
     font-size: @header-fs-desktop;
+  }
+
+  .introduction__header::before {
+    content: "Food";
+    font-size: 83px;
+    color: #fff;
+    font-family: @headers-font, @web-safe-serif-font, serif;
+    position: absolute;
+    top: -46px;
+    left: -47px;
+    z-index: 0;
+  }
+
+  .introduction__header::after {
+    content: "Photography";
+    font-size: 51px;
+    color: #fff;
+    font-family: @headers-font, @web-safe-serif-font, serif;
+    position: absolute;
+    top: 21px;
+    left: 155px;
+    z-index: 0;
   }
 
   .introduction__img {

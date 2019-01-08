@@ -1,0 +1,28 @@
+.section-counter {
+  display: none;
+}
+
+@media (min-width: @desktop-switch-width) {
+  .section-counter {
+    display: block;
+    position: absolute;
+    font-size: 14px;
+    color: @main-font-color;
+    font-family: "Lato-Light", Arial, sans-serif;
+  }
+
+  .section-counter ul {
+    margin: 0;
+  }
+
+  .section-counter__item {
+    padding-bottom: 38px;
+    border-bottom: 1px solid @main-font-color;
+
+    &--active {
+      padding-bottom: 5px;
+      padding-top: 15px;
+      border-bottom: 2px solid;
+    }
+  }
+}

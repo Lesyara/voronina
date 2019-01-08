@@ -20,6 +20,7 @@
   padding-top: 118px;
   padding-bottom: 12px;
   text-align: left;
+  background-image: none;
 }
 
 .detailed-portfolio__descr {
@@ -28,7 +29,20 @@
 }
 
 .detailed-portfolio__download-link {
+  position: relative;
   color: @third-font-color;
+}
+
+.detailed-portfolio__download-link::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 28px;
+  top: 27px;
+  right: -40px;
+  background-size: 24px auto;
+  background-image: url(../../img/portfolio-download.png);
+  background-repeat: no-repeat;
 }
 
 .detailed-portfolio__img {
@@ -55,6 +69,18 @@
     padding-top: 19px;
     font-size: 16px;
     color: @main-font-color;
+  }
+
+  .detailed-portfolio__download-link::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 36px;
+    top: 18px;
+    right: -55px;
+    background-size: 32px auto;
+    background-image: url(../../img/portfolio-download.png);
+    background-repeat: no-repeat;
   }
 
   .detailed-portfolio__img {
@@ -107,6 +133,18 @@
 
   .detailed-portfolio__download-link {
     padding-top: 35px;
+  }
+
+  .detailed-portfolio__download-link::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 28px;
+    top: 40px;
+    right: -56px;
+    background-size: 24px auto;
+    background-image: url(../../img/portfolio-download.png);
+    background-repeat: no-repeat;
   }
 
   .detailed-portfolio__img {

@@ -28,6 +28,11 @@
   src: url("../fonts/PlayfairDisplaySC-Regular/PlayfairDisplaySC-Regular.eot") format("embedded-opentype"), url("../fonts/PlayfairDisplaySC-Regular/PlayfairDisplaySC-Regular.ttf") format("truetype"), url("../fonts/PlayfairDisplaySC-Regular/PlayfairDisplaySC-Regular.woff") format("woff");
   font-weight: 400;
 }
+@font-face {
+  font-family: "Lato-Light";
+  src: url("../fonts/Lato-Light/Lato-Light.eot") format("embedded-opentype"), url("../fonts/Lato-Light/Lato-Light.ttf") format("truetype"), url("../fonts/Lato-Light/Lato-Light.woff") format("woff");
+  font-weight: 300;
+}
 html {
   box-sizing: content-box;
 }
@@ -73,13 +78,22 @@ figure {
   margin: 0 auto;
 }
 .section-header {
+  position: relative;
   margin: 0;
   padding-top: 54px;
   padding-bottom: 43px;
   font-family: "Source Serif Bold", "Lucida Bright", serif;
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.05em;
+}
+.section-header:not(.detailed-portfolio__header)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 31px;
+  border-right: 2px solid #cb98a8;
 }
 .section-link {
   display: inline-block;
@@ -116,8 +130,13 @@ figure {
     padding-bottom: 58px;
     font-size: 24px;
   }
-  .section-link {
-    letter-spacing: 0.2em;
+  .section-header:not(.detailed-portfolio__header)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 37px;
+    border-right: 2px solid #cb98a8;
   }
 }
 @media (min-width: 1180px) {
@@ -138,7 +157,6 @@ figure {
   .section-link {
     padding-top: 20px;
     font-size: 16px;
-    letter-spacing: 0.1em;
   }
 }
 .introduction {
@@ -183,9 +201,11 @@ figure {
 }
 .introduction__header {
   margin: 0;
+  line-height: 1.5;
+}
+.introduction__header-text {
   font-size: 30px;
   font-weight: 600;
-  line-height: 1.5;
   color: #ffffff;
 }
 .introduction__descr {
@@ -204,10 +224,10 @@ figure {
   .introduction {
     font-size: 16px;
     color: #212021;
-    background-image: url("../../img/cover-back-tablet.jpg");
+    background-image: url("../../img/cover-back-tablet.png");
     background-repeat: no-repeat;
-    background-position: right;
-    background-size: 308px auto;
+    background-position: calc(100% + 148px) 0;
+    background-size: contain;
   }
   .introduction__content {
     display: flex;
@@ -219,8 +239,33 @@ figure {
     margin-top: 275px;
   }
   .introduction__header {
+    position: relative;
+  }
+  .introduction__header-text {
     font-size: 36px;
     color: #212021;
+    z-index: 100;
+    position: relative;
+  }
+  .introduction__header::before {
+    content: "Food";
+    font-size: 48px;
+    color: #fff;
+    font-family: "Source Serif Bold", "Lucida Bright", serif;
+    position: absolute;
+    top: -21px;
+    left: -42px;
+    z-index: 0;
+  }
+  .introduction__header::after {
+    content: "Photography";
+    font-size: 48px;
+    color: #fff;
+    font-family: "Source Serif Bold", "Lucida Bright", serif;
+    position: absolute;
+    top: 9px;
+    left: 32px;
+    z-index: 0;
   }
   .introduction__img {
     display: block;
@@ -234,6 +279,7 @@ figure {
   .introduction__works {
     margin-bottom: 217px;
     color: #212021;
+    letter-spacing: 0.2em;
   }
   .introduction__links {
     display: block;
@@ -245,32 +291,61 @@ figure {
 }
 @media (min-width: 1180px) {
   .introduction {
+    position: relative;
     font-size: 18px;
-    background-image: url("../../img/cover-back-desktop.jpg");
-    background-size: 606px auto;
+    background-image: url("../../img/cover-back-desktop.png");
+    background-size: 685px auto;
     background-position: top right;
   }
   .introduction__menu .cite-menu__list {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    min-width: 460px;
+    background-image: linear-gradient(to bottom, transparent, transparent 55%, #fff 55%, #fff 60%, transparent 60%, transparent);
   }
   .introduction__content {
+    width: 1132px;
     justify-content: flex-start;
+  }
+  .introduction__section-counter {
+    top: 276px;
+    left: 1.5%;
   }
   .introduction__text {
     flex-basis: 400px;
     max-width: 400px;
     margin-top: 220px;
-    margin-left: 24px;
   }
   .introduction__works {
     margin-bottom: 237px;
+    letter-spacing: 0.1em;
   }
   .introduction__links {
     margin-bottom: 30px;
     font-size: 14px;
   }
-  .introduction__header {
+  .introduction__header-text {
     font-size: 48px;
+  }
+  .introduction__header::before {
+    content: "Food";
+    font-size: 83px;
+    color: #fff;
+    font-family: "Source Serif Bold", "Lucida Bright", serif;
+    position: absolute;
+    top: -46px;
+    left: -47px;
+    z-index: 0;
+  }
+  .introduction__header::after {
+    content: "Photography";
+    font-size: 51px;
+    color: #fff;
+    font-family: "Source Serif Bold", "Lucida Bright", serif;
+    position: absolute;
+    top: 21px;
+    left: 155px;
+    z-index: 0;
   }
   .introduction__img {
     width: 348px;
@@ -377,17 +452,16 @@ figure {
     margin-left: 80px;
   }
   .cite-menu__list {
-    margin: 0;
-    margin-left: 45px;
-    margin-right: 30px;
+    margin: 0 52px 0 70px;
   }
   .cite-menu__list li {
     display: inline-block;
   }
   .cite-menu__item {
     display: block;
-    padding: 32px 36px 19px;
+    padding: 32px 17px 19px;
     font-size: 18px;
+    cursor: pointer;
   }
   .cite-menu__toggle {
     display: none;
@@ -412,13 +486,26 @@ figure {
   padding-top: 118px;
   padding-bottom: 12px;
   text-align: left;
+  background-image: none;
 }
 .detailed-portfolio__descr {
   margin: 0;
   line-height: 1.25;
 }
 .detailed-portfolio__download-link {
+  position: relative;
   color: #ffffff;
+}
+.detailed-portfolio__download-link::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 28px;
+  top: 27px;
+  right: -40px;
+  background-size: 24px auto;
+  background-image: url(../../img/portfolio-download.png);
+  background-repeat: no-repeat;
 }
 .detailed-portfolio__img {
   display: none;
@@ -441,6 +528,17 @@ figure {
     padding-top: 19px;
     font-size: 16px;
     color: #212021;
+  }
+  .detailed-portfolio__download-link::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 36px;
+    top: 18px;
+    right: -55px;
+    background-size: 32px auto;
+    background-image: url(../../img/portfolio-download.png);
+    background-repeat: no-repeat;
   }
   .detailed-portfolio__img {
     display: block;
@@ -486,6 +584,17 @@ figure {
   .detailed-portfolio__download-link {
     padding-top: 35px;
   }
+  .detailed-portfolio__download-link::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 28px;
+    top: 40px;
+    right: -56px;
+    background-size: 24px auto;
+    background-image: url(../../img/portfolio-download.png);
+    background-repeat: no-repeat;
+  }
   .detailed-portfolio__img {
     display: block;
     position: absolute;
@@ -500,11 +609,11 @@ figure {
   font-size: 14px;
   color: #212021;
   background-image: url("../../img/about-photo-1-mob.jpg"), url("../../img/about-photo-2-mob.jpg");
-  background-position: right, left;
+  background-position: right 43%, left 34%;
   background-repeat: no-repeat;
 }
 .about-photographer .content-wrapper {
-  margin: 80px auto 0;
+  margin: 75px auto 0;
 }
 .about-photographer__text-wrapper {
   padding-top: 350px;
@@ -531,7 +640,7 @@ figure {
   color: #212021;
 }
 .about-photographer__work-with-me {
-  padding-top: 30px;
+  padding-top: 18px;
   padding-bottom: 5px;
   text-align: center;
 }
@@ -578,6 +687,7 @@ figure {
 }
 @media (min-width: 1180px) {
   .about-photographer {
+    position: relative;
     font-size: 18px;
     background-image: linear-gradient(to right, #f8f8f8 0%, #f8f8f8 0% 26%, transparent 26%);
     background-repeat: no-repeat;
@@ -592,6 +702,10 @@ figure {
     background-position: left 68%, 44% 81%, bottom right;
     background-size: 316px 431px, 316px 431px, auto 483px;
     background-repeat: no-repeat;
+  }
+  .about-photographer__section-counter {
+    top: 344px;
+    left: 2%;
   }
   .about-photographer__text-wrapper {
     display: flex;
@@ -659,6 +773,14 @@ figure {
   letter-spacing: 0.015em;
 }
 @media (min-width: 640px) {
+  .pricelist {
+    font-size: 16px;
+    background-image: url("../../img/pricelist-back-tablet.png");
+    background-repeat: no-repeat;
+    background-position-y: 52%;
+    background-position-x: center;
+    background-size: auto;
+  }
   .pricelist .content-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -692,15 +814,23 @@ figure {
   }
   .pricelist__descr {
     margin: 0 auto;
+    font-size: 14px;
   }
 }
 @media (min-width: 1180px) {
   .pricelist {
+    position: relative;
     font-size: 18px;
+    background-image: url("../../img/pricelist-back-desktop.png");
+    background-position-y: 60%;
   }
   .pricelist .content-wrapper {
     width: 1100px;
     margin-top: 100px;
+  }
+  .pricelist__section-counter {
+    top: 593px;
+    left: 2%;
   }
   .pricelist__item--1hour {
     flex-basis: 315px;
@@ -724,6 +854,7 @@ figure {
   }
   .pricelist__descr {
     max-width: 330px;
+    font-size: 18px;
   }
 }
 .portfolio-prewiew .content-wrapper {
@@ -748,6 +879,7 @@ figure {
   line-height: 3.2;
 }
 .portfolio-prewiew__header {
+  font-size: 18px;
   text-transform: uppercase;
 }
 @media (min-width: 640px) {
@@ -756,10 +888,11 @@ figure {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 152px;
+    margin-top: 155px;
   }
   .portfolio-prewiew__header {
     flex-basis: 100%;
+    font-size: 24px;
   }
   .portfolio-prewiew__descr {
     font-size: 16px;
@@ -799,9 +932,19 @@ figure {
   }
 }
 @media (min-width: 1180px) {
+  .portfolio-prewiew {
+    position: relative;
+  }
   .portfolio-prewiew .content-wrapper {
     width: 1100px;
     margin-top: 140px;
+  }
+  .portfolio-prewiew__section-counter {
+    top: 687px;
+    left: 2%;
+  }
+  .portfolio-prewiew__header {
+    font-size: 36px;
   }
   .portfolio-prewiew__descr {
     font-size: 18px;
@@ -864,40 +1007,75 @@ desktop:
   text-align: center;
 }
 .contacts .content-wrapper {
-  margin: 100px auto 0;
+  margin: 95px auto 0;
+}
+.contacts__header {
+  padding-bottom: 22px;
+}
+.contacts__item {
+  letter-spacing: 0.1em;
+}
+.contacts__item--phone {
+  letter-spacing: 0;
 }
 .contacts__link {
   text-decoration: none;
   color: #212021;
   cursor: pointer;
 }
+.contacts__link::before {
+  content: "///";
+  padding-left: 0;
+  padding-right: 9px;
+  color: #8cb473;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
 .contacts__list {
-  margin: 0 auto;
+  margin: 0 auto 30px;
   text-align: center;
-  line-height: 2.5;
+  line-height: 2;
   font-style: normal;
 }
 .contacts__social {
-  margin: 0;
-  font-style: normal;
+  display: flex;
+  justify-content: space-between;
+  width: 182px;
+  margin: 0 auto 30px;
 }
 .contacts__social-item {
   display: inline-block;
 }
-.contacts__header {
-  padding-bottom: 25px;
+.contacts__social-link {
+  cursor: pointer;
+  font-size: 0;
+}
+.contacts__social-icon {
+  width: 26px;
+  height: 26px;
 }
 @media (min-width: 640px) {
   .contacts {
     font-size: 16px;
   }
   .contacts .content-wrapper {
-    margin: 244px auto 0;
+    margin: 242px auto 0;
   }
   .contacts__list {
-    margin-top: 40px;
-    margin-bottom: 43px;
-    line-height: 2.7;
+    margin-top: 35px;
+    margin-bottom: 39px;
+    line-height: 2.6;
+  }
+  .contacts__link::before {
+    padding-left: 20px;
+    padding-right: 25px;
+  }
+  .contacts__social {
+    width: 196px;
+  }
+  .contacts__social-icon {
+    width: 34px;
+    height: 34px;
   }
 }
 @media (min-width: 1180px) {
@@ -910,9 +1088,37 @@ desktop:
   .contacts__list {
     display: flex;
     justify-content: space-between;
-    max-width: 1000px;
     flex-wrap: wrap;
+    max-width: 1000px;
     margin-top: 56px;
-    margin-bottom: 59px;
+    margin-bottom: 60px;
+  }
+  .contacts__link::before {
+    padding-left: 0;
+    padding-right: 4px;
+  }
+}
+.section-counter {
+  display: none;
+}
+@media (min-width: 1180px) {
+  .section-counter {
+    display: block;
+    position: absolute;
+    font-size: 14px;
+    color: #212021;
+    font-family: "Lato-Light", Arial, sans-serif;
+  }
+  .section-counter ul {
+    margin: 0;
+  }
+  .section-counter__item {
+    padding-bottom: 38px;
+    border-bottom: 1px solid #212021;
+  }
+  .section-counter__item--active {
+    padding-bottom: 5px;
+    padding-top: 15px;
+    border-bottom: 2px solid;
   }
 }

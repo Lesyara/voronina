@@ -34,6 +34,12 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Lato-Light";
+  src: url("../fonts/Lato-Light/Lato-Light.eot") format("embedded-opentype"), url("../fonts/Lato-Light/Lato-Light.ttf") format("truetype"), url("../fonts/Lato-Light/Lato-Light.woff") format("woff");
+  font-weight: 300;
+}
+
 html {
   box-sizing: content-box;
 }
@@ -87,13 +93,23 @@ figure {
 }
 
 .section-header {
+  position: relative;
   margin: 0;
   padding-top: 54px;
   padding-bottom: 43px;
   font-family: @headers-font, @web-safe-serif-font, serif;
   font-size: @section-header-fs-mob;
   text-align: center;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.05em;
+}
+
+.section-header:not(.detailed-portfolio__header)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 31px;
+  border-right: 2px solid @extra-font-color;
 }
 
 .section-link {
@@ -136,8 +152,13 @@ figure {
     font-size: @section-header-fs-tablet;
   }
 
-  .section-link {
-    letter-spacing: 0.2em;
+  .section-header:not(.detailed-portfolio__header)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 37px;
+    border-right: 2px solid @extra-font-color;
   }
 }
 
@@ -162,6 +183,5 @@ figure {
   .section-link {
     padding-top: 20px;
     font-size: @section-link-fs-desktop;
-    letter-spacing: 0.1em;
   }
 }

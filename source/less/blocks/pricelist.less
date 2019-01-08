@@ -34,6 +34,15 @@
 }
 
 @media (min-width: @tablet-switch-width) {
+  .pricelist {
+    font-size: @plain-text-fs-tablet;
+    background-image: url("../../img/pricelist-back-tablet.png");
+    background-repeat: no-repeat;
+    background-position-y: 52%;
+    background-position-x: center;
+    background-size: auto;
+  }
+
   .pricelist .content-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -74,17 +83,26 @@
 
   .pricelist__descr {
     margin: 0 auto;
+    font-size: 14px;
   }
 }
 
 @media (min-width: @desktop-switch-width) {
   .pricelist {
+    position: relative;
     font-size: @plain-text-fs-desktop;
+    background-image: url("../../img/pricelist-back-desktop.png");
+    background-position-y: 60%;
   }
 
   .pricelist .content-wrapper {
     width: 1100px;
     margin-top: 100px;
+  }
+
+  .pricelist__section-counter {
+    top: 593px;
+    left: 2%;
   }
 
   .pricelist__item {
@@ -116,5 +134,6 @@
 
   .pricelist__descr {
     max-width: 330px;
+    font-size: 18px;
   }
 }

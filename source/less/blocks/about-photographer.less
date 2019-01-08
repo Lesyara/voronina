@@ -3,12 +3,12 @@
   font-size: @plain-text-fs-mob;
   color: @main-font-color;
   background-image: url("../../img/about-photo-1-mob.jpg"), url("../../img/about-photo-2-mob.jpg");
-  background-position: right, left;
+  background-position: right 43%, left 34%;
   background-repeat: no-repeat;
 }
 
 .about-photographer .content-wrapper {
-  margin: 80px auto 0;
+  margin: 75px auto 0;
 }
 
 .about-photographer__text-wrapper {
@@ -42,7 +42,7 @@
 }
 
 .about-photographer__work-with-me {
-  padding-top: 30px;
+  padding-top: 18px;
   padding-bottom: 5px;
   text-align: center;
 }
@@ -99,6 +99,7 @@
 
 @media (min-width: @desktop-switch-width) {
   .about-photographer {
+    position: relative;
     font-size: @plain-text-fs-desktop;
     background-image: linear-gradient(to right, @section-back-color 0%, @section-back-color 0% 26%, transparent 26%);
     background-repeat: no-repeat;
@@ -114,6 +115,11 @@
     background-position: left 68%, 44% 81%, bottom right;
     background-size: 316px 431px, 316px 431px, auto 483px;
     background-repeat: no-repeat;
+  }
+
+  .about-photographer__section-counter {
+    top: 344px;
+    left: 2%;
   }
 
   .about-photographer__text-wrapper {
