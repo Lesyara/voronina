@@ -6,9 +6,12 @@
   .section-counter {
     display: block;
     position: absolute;
+    width: 37px;
+    text-align: center;
     font-size: 14px;
     color: @main-font-color;
     font-family: "Lato-Light", Arial, sans-serif;
+    z-index: 200;
   }
 
   .section-counter ul {
@@ -16,13 +19,24 @@
   }
 
   .section-counter__item {
-    padding-bottom: 38px;
-    border-bottom: 1px solid @main-font-color;
+    margin-bottom: 18px;
+    margin-right: 25px;
+    border-bottom: 1px solid;
 
     &--active {
+      margin-right: 0;
       padding-bottom: 5px;
-      padding-top: 15px;
-      border-bottom: 2px solid;
+      padding-top: 0;
+      border-width: 2px;
     }
+  }
+
+  .section-counter__item a {
+    color: transparent;
+    text-decoration: none;
+  }
+
+  .section-counter__item--active a {
+    color: @main-font-color;
   }
 }

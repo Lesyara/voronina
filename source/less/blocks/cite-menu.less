@@ -8,11 +8,6 @@
   &--hidden {
     display: none;
   }
-
-  &--show {
-    display: flex;
-    z-index: 0;
-  }
 }
 
 .cite-menu__label {
@@ -24,15 +19,13 @@
   letter-spacing: 0.25em;
   background-color: @accent-color;
   text-transform: uppercase;
-  z-index: 100;
+  z-index: 1000;
+  cursor: pointer;
 }
 
 .cite-menu__toggle {
-  flex-basis: 23px;
   padding: 10px 0;
-  margin-right: 16px;
   font-size: 0;
-  background-size: 25px 14px;
   background-position: 0 0;
   background-repeat: no-repeat;
   background-color: transparent;
@@ -41,11 +34,21 @@
   cursor: pointer;
 
   &--to-open {
-    background-image: url("../../img/toggle_bg_mob.svg");
+    flex-basis: 25px;
+    margin-right: 16px;
+    background-image: url("../../img/svg/toggle-menu-white.svg");
+    background-size: 25px 14px;
   }
 
   &--to-close {
-    background-image: url("../../img/toggle_bg_mob.svg");
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 8px 0;
+    width: 16px;
+    margin: 0;
+    background-image: url("../../img/svg/close-menu.svg");
+    background-size: 16px 16px;
   }
 }
 
@@ -56,6 +59,7 @@
   color: @main-font-color;
   line-height: 1.5;
   letter-spacing: 0.1em;
+  text-decoration: none;
 }
 
 .cite-menu__contact {
@@ -81,11 +85,16 @@
     margin-left: 114px;
 
     &--to-open {
-      background-image: url("../../img/toggle_bg_tablet.svg");
+      background-image: url("../../img/svg/toggle-menu-black.svg");
     }
 
     &--to-close {
-      background-image: url("../../img/toggle_bg_tablet.svg");
+      position: absolute;
+      top: 21px;
+      right: 51px;
+      padding: 11px 0;
+      width: 21px;
+      background-size: 21px 21px;
     }
   }
 }

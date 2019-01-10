@@ -30,6 +30,7 @@
   width: 100%;
   height: 100%;
   background-color: @section-back-color;
+  z-index: 500;
 }
 
 .introduction__popup-menu .cite-menu__list {
@@ -39,6 +40,19 @@
   align-items: center;
   max-width: 150px;
   margin: 0 auto;
+  height: 100%;
+}
+
+.introduction__popup-menu .cite-menu__item {
+  line-height: 2.55;
+  letter-spacing: 0.15em;
+  padding-bottom: 3px;
+  cursor: pointer;
+}
+
+.introduction__popup-menu .cite-menu__item:hover,
+.introduction__popup-menu .cite-menu__item:active {
+  border-bottom: 3px solid @accent-color;
 }
 
 .introduction__text {
@@ -48,6 +62,7 @@
 .introduction__header {
   margin: 0;
   line-height: 1.5;
+  letter-spacing: 0.07em;
 }
 
 .introduction__header-text {
@@ -82,15 +97,38 @@
     background-size: contain;
   }
 
+  .introduction__popup-menu {
+    background-image: url("../../img/popup-bg-tablet.png");
+    background-position: top center;
+  }
+
+  .introduction__popup-menu .cite-menu__list {
+    max-width: 270px;
+  }
+
+  .introduction__popup-menu .cite-menu__item {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 2.25;
+    padding-bottom: 7px;
+  }
+
+  .introduction__popup-menu .cite-menu__item:hover,
+  .introduction__popup-menu .cite-menu__item:active {
+    border-bottom: 6px solid @accent-color;
+  }
+
   .introduction__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 660px;
   }
 
   .introduction__text {
     max-width: 300px;
     margin-top: 275px;
+    margin-left: 10px;
   }
 
   .introduction__header {
@@ -168,6 +206,10 @@
     background-image: linear-gradient(to bottom, transparent, transparent 55%, #fff 55%, #fff 60%, transparent 60%, transparent);
   }
 
+  .introduction__popup-menu {
+    display: none;
+  }
+
   .introduction__content {
     width: 1132px;
     justify-content: flex-start;
@@ -182,6 +224,7 @@
     flex-basis: 400px;
     max-width: 400px;
     margin-top: 220px;
+    margin-left: 0;
   }
 
   .introduction__works {

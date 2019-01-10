@@ -6,9 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Voronina</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
-  <!--script src="main.js"></script-->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#ffffff">
+  <script src="js/main-script.min.js" defer></script>
 </head>
 
 <body>
@@ -28,15 +34,15 @@
   </svg>
   <h1 class="visually-hidden">Food-фотограф Дарья Воронина</h1>
   <main>
-    <section class="introduction">
+    <section id="introduction-link" class="introduction">
       <h2 class="visually-hidden">Дарья Воронина</h2>
       <nav class="introduction__menu cite-menu content-wrapper">
         <h3 class="visually-hidden">Меню сайта</h3>
-        <a class="cite-menu__label">Voronina</a>
+        <a class="cite-menu__label">Voronina.</a>
         <ul class="cite-menu__list">
-          <li><a class="cite-menu__item">Обо мне</a></li>
-          <li><a class="cite-menu__item">Стоимость</a></li>
-          <li><a class="cite-menu__item">Контакты</a></li>
+          <li><a href="#about-photographer-link" class="cite-menu__item">Обо мне</a></li>
+          <li><a href="#pricelist-link" class="cite-menu__item">Стоимость</a></li>
+          <li><a href="#contacts-link" class="cite-menu__item">Контакты</a></li>
         </ul>
         <button class="cite-menu__toggle cite-menu__toggle--to-open">
           Открыть меню
@@ -45,31 +51,40 @@
       </nav>
       <div class="introduction__popup-menu introduction__popup-menu cite-menu--hidden ">
         <ul class="cite-menu__list">
-          <li><a class="cite-menu__item">Портфолио</a></li>
-          <li><a class="cite-menu__item">Обо мне</a></li>
-          <li><a class="cite-menu__item">Стоимость</a></li>
-          <li><a class="cite-menu__item">Контакты</a></li>
+          <li><a href="#portfolio-link" class="cite-menu__item">Портфолио</a></li>
+          <li><a href="#about-photographer-link" class="cite-menu__item">Обо мне</a></li>
+          <li><a href="#pricelist-link" class="cite-menu__item">Стоимость</a></li>
+          <li><a href="#contacts-link" class="cite-menu__item">Контакты</a></li>
         </ul>
+        <button class="cite-menu__toggle cite-menu__toggle--to-close">
+          Закрыть меню
+        </button>
       </div>
       <div class="introduction__content content-wrapper">
         <div class="introduction__section-counter section-counter">
           <ul>
             <li class="section-counter__item section-counter__item--active">
-              01
+              <a href="#introduction-link">01</a>
             </li>
             <li class="section-counter__item">
+              <a href="#portfolio-link">02</a>
             </li>
-            <li class="section-counter__item"></li>
-            <li class="section-counter__item"></li>
-            <li class="section-counter__item"></li>
-            <li class="section-counter__item"></li>
+            <li class="section-counter__item">
+              <a href="#about-photographer-link">03</a>
+            </li>
+            <li class="section-counter__item">
+              <a href="#pricelist-link">04</a>
+            </li>
+            <li class="section-counter__item">
+              <a href="#contacts-link">05</a>
+            </li>
           </ul>
         </div>
         <div class="introduction__text">
           <h3 class="introduction__header"><span class="introduction__header-text">Дарья Воронина</span></h3>
           <p class="introduction__descr">Food — фотограф и food — стилист
             в Москве и Московской области</p>
-          <a class="introduction__works section-link">Портфолио<span class="section-link__decor">&#8213;</span></a>
+          <a href="#portfolio-link" class="introduction__works section-link">Портфолио<span class="section-link__decor">&#8213;</span></a>
           <div class="introduction__links">
             <a>instagram</a> — <a>facebook</a>
           </div>
@@ -80,19 +95,26 @@
         </picture>
       </div>
     </section>
-    <section class="portfolio-prewiew">
+    <section id="portfolio-link" class="portfolio-prewiew">
       <div class="content-wrapper">
         <h2 class="portfolio-prewiew__header section-header">Портфолио</h2>
         <div class="portfolio-prewiew__section-counter section-counter">
           <ul>
-            <li class="section-counter__item"></li>
-            <li class="section-counter__item section-counter__item--active">
-              02
+            <li class="section-counter__item">
+              <a href="#introduction-link">01</a>
             </li>
-            <li class="section-counter__item"></li>
-            <li class="section-counter__item"></li>
-            <li class="section-counter__item"></li>
-            <li class="section-counter__item"></li>
+            <li class="section-counter__item section-counter__item--active">
+              <a href="#portfolio-link">02</a>
+            </li>
+            <li class="section-counter__item">
+              <a href="#about-photographer-link">03</a>
+            </li>
+            <li class="section-counter__item">
+              <a href="#pricelist-link">04</a>
+            </li>
+            <li class="section-counter__item">
+              <a href="#contacts-link">05</a>
+            </li>
           </ul>
         </div>
         <figure class="portfolio-prewiew__item portfolio-prewiew__item--lady-marm">
@@ -162,20 +184,26 @@
         </div>
       </div>
     </section>
-    <section class="about-photographer">
+    <section id="about-photographer-link" class="about-photographer">
       <div class="content-wrapper">
         <h2 class="about-photographer__header section-header">Обо мне</h2>
         <div class="about-photographer__section-counter section-counter">
           <ul>
-            <li class="section-counter__item"></li>
             <li class="section-counter__item">
+              <a href="#introduction-link">01</a>
+            </li>
+            <li class="section-counter__item">
+              <a href="#portfolio-link">02</a>
             </li>
             <li class="section-counter__item section-counter__item--active">
-              03
+              <a href="#about-photographer-link">03</a>
             </li>
-            <li class="section-counter__item"></li>
-            <li class="section-counter__item"></li>
-            <li class="section-counter__item"></li>
+            <li class="section-counter__item">
+              <a href="#pricelist-link">04</a>
+            </li>
+            <li class="section-counter__item">
+              <a href="#contacts-link">05</a>
+            </li>
           </ul>
         </div>
         <div class="about-photographer__text-wrapper">
@@ -189,7 +217,7 @@
           </p>
           <div class="about-photographer__item about-photographer__contacts">
             <div class="about-photographer__contact">
-              Tel.:<a class="about-photographer__phone" href="tel:+ 7 916 66 77 112">+ 7 916 66 77 112</a>
+              Tel.:<a class="about-photographer__phone" href="tel:+7-916-66-77-112">+ 7 916 66 77 112</a>
             </div>
             <div class="about-photographer__contact">
               Mail:<a class="about-photographer__mail" href="mailto:daria.voronina@gmail.com">daria.voronina@gmail.com</a>
@@ -199,19 +227,26 @@
         </div>
       </div>
     </section>
-    <section class="pricelist">
+    <section id="pricelist-link" class="pricelist">
       <div class="content-wrapper">
         <h2 class="pricelist__header section-header">Стоимость</h2>
         <div class="pricelist__section-counter section-counter">
           <ul>
-            <li class="section-counter__item"></li>
             <li class="section-counter__item">
+              <a href="#introduction-link">01</a>
             </li>
             <li class="section-counter__item">
+              <a href="#portfolio-link">02</a>
             </li>
-            <li class="section-counter__item section-counter__item--active">04</li>
-            <li class="section-counter__item"></li>
-            <li class="section-counter__item"></li>
+            <li class="section-counter__item">
+              <a href="#about-photographer-link">03</a>
+            </li>
+            <li class="section-counter__item section-counter__item--active">
+              <a href="#pricelist-link">04</a>
+            </li>
+            <li class="section-counter__item">
+              <a href="#contacts-link">05</a>
+            </li>
           </ul>
         </div>
         <figure class="pricelist__item pricelist__item--12hours">
@@ -264,14 +299,14 @@
       </div>
     </section>
   </main>
-  <footer class="contacts">
+  <footer id="contacts-link" class="contacts">
     <div class="content-wrapper">
       <h2 class="contacts__header section-header">Свяжитесь со мной</h2>
       <address>
         <ul class="contacts__list">
           <li class="contacts__item">Skype <a class="contacts__link" href="skype:daria.voronina?call">daria.voronina</a></li>
           <li class="contacts__item">E-mail <a class="contacts__link" href="mailto:daria.voronina@gmail.com">daria.voronina@gmail.com</a></li>
-          <li class="contacts__item contacts__item--phone">Phone <a class="contacts__link" href="tel:+ 7 916 66 77 112">+
+          <li class="contacts__item contacts__item--phone">Phone <a class="contacts__link" href="tel:+7-916-66-77-112">+
               7 916 66 77 112</a></li>
         </ul>
         <ul class="contacts__social">
