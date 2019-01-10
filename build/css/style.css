@@ -168,7 +168,7 @@ figure {
   font-weight: 300;
   color: #ffffff;
   text-transform: none;
-  background-image: url("../../img/img-cover-mob.jpg");
+  background-image: url("../img/img-cover-mob.jpg");
   background-size: cover;
   background-color: #f8f8f8;
 }
@@ -238,13 +238,13 @@ figure {
   .introduction {
     font-size: 16px;
     color: #212021;
-    background-image: url("../../img/cover-back-tablet.png");
+    background-image: url("../img/cover-back-tablet.png");
     background-repeat: no-repeat;
     background-position: calc(100% + 148px) 0;
     background-size: contain;
   }
   .introduction__popup-menu {
-    background-image: url("../../img/popup-bg-tablet.png");
+    background-image: url("../img/popup-bg-tablet.png");
     background-position: top center;
   }
   .introduction__popup-menu .cite-menu__list {
@@ -326,7 +326,7 @@ figure {
   .introduction {
     position: relative;
     font-size: 18px;
-    background-image: url("../../img/cover-back-desktop.png");
+    background-image: url("../img/cover-back-desktop.png");
     background-size: 685px auto;
     background-position: top right;
   }
@@ -430,7 +430,7 @@ figure {
 .cite-menu__toggle--to-open {
   flex-basis: 25px;
   margin-right: 16px;
-  background-image: url("../../img/svg/toggle-menu-white.svg");
+  background-image: url("../img/svg/toggle-menu-white.svg");
   background-size: 25px 14px;
 }
 .cite-menu__toggle--to-close {
@@ -440,7 +440,7 @@ figure {
   padding: 8px 0;
   width: 16px;
   margin: 0;
-  background-image: url("../../img/svg/close-menu.svg");
+  background-image: url("../img/svg/close-menu.svg");
   background-size: 16px 16px;
 }
 .cite-menu__item {
@@ -472,7 +472,7 @@ figure {
     margin-left: 114px;
   }
   .cite-menu__toggle--to-open {
-    background-image: url("../../img/svg/toggle-menu-black.svg");
+    background-image: url("../img/svg/toggle-menu-black.svg");
   }
   .cite-menu__toggle--to-close {
     position: absolute;
@@ -518,7 +518,7 @@ figure {
   font-family: "Source Serif Pro Regular", "Lucida Bright", serif;
   font-size: 14px;
   color: #ffffff;
-  background-image: url("../../img/detailed-portfolio-bg-mob.png");
+  background-image: url("../img/detailed-portfolio-bg-mob.png");
   background-repeat: no-repeat;
   background-position: top right;
 }
@@ -552,7 +552,7 @@ figure {
   top: 27px;
   right: -40px;
   background-size: 24px auto;
-  background-image: url(../../img/portfolio-download.png);
+  background-image: url(../img/portfolio-download.png);
   background-repeat: no-repeat;
 }
 .detailed-portfolio__img {
@@ -585,7 +585,7 @@ figure {
     top: 18px;
     right: -55px;
     background-size: 32px auto;
-    background-image: url(../../img/portfolio-download.png);
+    background-image: url(../img/portfolio-download.png);
     background-repeat: no-repeat;
   }
   .detailed-portfolio__img {
@@ -640,7 +640,7 @@ figure {
     top: 40px;
     right: -56px;
     background-size: 24px auto;
-    background-image: url(../../img/portfolio-download.png);
+    background-image: url(../img/portfolio-download.png);
     background-repeat: no-repeat;
   }
   .detailed-portfolio__img {
@@ -656,7 +656,7 @@ figure {
   font-family: "Source Serif Pro Regular", "Lucida Bright", serif;
   font-size: 14px;
   color: #212021;
-  background-image: url("../../img/about-photo-1-mob.jpg"), url("../../img/about-photo-2-mob.jpg");
+  background-image: url("../img/about-photo-1-mob.jpg"), url("../img/about-photo-2-mob.jpg");
   background-position: right 43%, left 34%;
   background-repeat: no-repeat;
 }
@@ -718,11 +718,11 @@ figure {
     text-align: left;
   }
   .about-photographer__info {
-    background-image: url("../../img/about-photo-1-tablet.jpg");
+    background-image: url("../img/about-photo-1-tablet.jpg");
     background-repeat: no-repeat;
   }
   .about-photographer__contacts {
-    background-image: url("../../img/about-photo-2-tablet.jpg");
+    background-image: url("../img/about-photo-2-tablet.jpg");
     background-repeat: no-repeat;
   }
   .about-photographer__contact {
@@ -746,7 +746,7 @@ figure {
     flex-direction: column;
     width: 1100px;
     margin-top: 128px;
-    background-image: url("../../img/about-photo-1-desktop.jpg"), url("../../img/about-photo-2-desktop.jpg"), linear-gradient(to right, transparent 0%, transparent 0% 45%, #f8f8f8 45%);
+    background-image: url("../img/about-photo-1-desktop.jpg"), url("../img/about-photo-2-desktop.jpg"), linear-gradient(to right, transparent 0%, transparent 0% 45%, #f8f8f8 45%);
     background-position: left 68%, 44% 81%, bottom right;
     background-size: 316px 431px, 316px 431px, auto 483px;
     background-repeat: no-repeat;
@@ -823,7 +823,7 @@ figure {
 @media (min-width: 640px) {
   .pricelist {
     font-size: 16px;
-    background-image: url("../../img/pricelist-back-tablet.png");
+    background-image: url("../img/pricelist-back-tablet.png");
     background-repeat: no-repeat;
     background-position-y: 52%;
     background-position-x: center;
@@ -869,7 +869,7 @@ figure {
   .pricelist {
     position: relative;
     font-size: 18px;
-    background-image: url("../../img/pricelist-back-desktop.png");
+    background-image: url("../img/pricelist-back-desktop.png");
     background-position-y: 60%;
   }
   .pricelist .content-wrapper {
